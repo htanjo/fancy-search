@@ -1,0 +1,943 @@
+{
+    "project": {
+        "name": "Fancy Search",
+        "description": "Simple search interface with Web API.",
+        "version": "0.1.0",
+        "url": "",
+        "options": {
+            "paths": "src/js/app",
+            "outdir": "docs"
+        }
+    },
+    "files": {
+        "src/js/app/collections/worklist.js": {
+            "name": "src/js/app/collections/worklist.js",
+            "modules": {},
+            "classes": {
+                "": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/js/app/models/application.js": {
+            "name": "src/js/app/models/application.js",
+            "modules": {
+                "application": 1
+            },
+            "classes": {
+                "Application": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/js/app/models/work.js": {
+            "name": "src/js/app/models/work.js",
+            "modules": {
+                "work": 1
+            },
+            "classes": {
+                "Work": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/js/app/routers/router.js": {
+            "name": "src/js/app/routers/router.js",
+            "modules": {
+                "router": 1
+            },
+            "classes": {
+                "Router": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/js/app/views/article.js": {
+            "name": "src/js/app/views/article.js",
+            "modules": {
+                "article": 1
+            },
+            "classes": {
+                "Article": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/js/app/views/content.js": {
+            "name": "src/js/app/views/content.js",
+            "modules": {
+                "content": 1
+            },
+            "classes": {
+                "Content": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/js/app/views/navigation.js": {
+            "name": "src/js/app/views/navigation.js",
+            "modules": {
+                "navigation": 1
+            },
+            "classes": {
+                "Navigation": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/js/app/views/page.js": {
+            "name": "src/js/app/views/page.js",
+            "modules": {
+                "page": 1
+            },
+            "classes": {
+                "Page": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/js/app/views/search.js": {
+            "name": "src/js/app/views/search.js",
+            "modules": {
+                "search": 1
+            },
+            "classes": {
+                "Search": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "application": {
+            "name": "application",
+            "submodules": {},
+            "classes": {
+                "Application": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/js/app/models/application.js",
+            "line": 20,
+            "description": "Module of Application main.",
+            "author": "htanjo"
+        },
+        "work": {
+            "name": "work",
+            "submodules": {},
+            "classes": {
+                "Work": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/js/app/models/work.js",
+            "line": 17,
+            "description": "Module of work.",
+            "author": "htanjo"
+        },
+        "router": {
+            "name": "router",
+            "submodules": {},
+            "classes": {
+                "Router": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/js/app/routers/router.js",
+            "line": 20,
+            "description": "Module of application main router.",
+            "author": "htanjo"
+        },
+        "article": {
+            "name": "article",
+            "submodules": {},
+            "classes": {
+                "Article": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/js/app/views/article.js",
+            "line": 21,
+            "description": "Module of article view.",
+            "author": "htanjo"
+        },
+        "content": {
+            "name": "content",
+            "submodules": {},
+            "classes": {
+                "Content": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/js/app/views/content.js",
+            "line": 20,
+            "description": "Module of content view.",
+            "author": "htanjo"
+        },
+        "navigation": {
+            "name": "navigation",
+            "submodules": {},
+            "classes": {
+                "Navigation": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/js/app/views/navigation.js",
+            "line": 18,
+            "description": "Module of navigation view.",
+            "author": "htanjo"
+        },
+        "page": {
+            "name": "page",
+            "submodules": {},
+            "classes": {
+                "Page": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/js/app/views/page.js",
+            "line": 23,
+            "description": "Module of application main view.",
+            "author": "htanjo"
+        },
+        "search": {
+            "name": "search",
+            "submodules": {},
+            "classes": {
+                "": 1,
+                "Search": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/js/app/views/search.js",
+            "line": 18,
+            "description": "Module of search widget view.",
+            "author": "htanjo"
+        }
+    },
+    "classes": {
+        "": {
+            "file": "src/js/app/collections/worklist.js",
+            "line": 26,
+            "description": "Create work list collection.",
+            "uses": [
+                "Backbone.Collection"
+            ],
+            "constructs": "",
+            "module": "search"
+        },
+        "Application": {
+            "name": "Application",
+            "shortname": "Application",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "application",
+            "namespace": "",
+            "file": "src/js/app/models/application.js",
+            "line": 20,
+            "description": "Class of application main model.",
+            "is_constructor": 1,
+            "extends": "Backbone.Model"
+        },
+        "Work": {
+            "name": "Work",
+            "shortname": "Work",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "work",
+            "namespace": "",
+            "file": "src/js/app/models/work.js",
+            "line": 17,
+            "description": "Class of work model.",
+            "is_constructor": 1,
+            "extends": "Backbone.Model"
+        },
+        "Router": {
+            "name": "Router",
+            "shortname": "Router",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "router",
+            "namespace": "",
+            "file": "src/js/app/routers/router.js",
+            "line": 20,
+            "description": "Class of application main router.",
+            "is_constructor": 1,
+            "extends": "Backbone.Router"
+        },
+        "Article": {
+            "name": "Article",
+            "shortname": "Article",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "article",
+            "namespace": "",
+            "file": "src/js/app/views/article.js",
+            "line": 21,
+            "description": "Class of article view.",
+            "is_constructor": 1,
+            "extends": "Backbone.View"
+        },
+        "Content": {
+            "name": "Content",
+            "shortname": "Content",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "content",
+            "namespace": "",
+            "file": "src/js/app/views/content.js",
+            "line": 20,
+            "description": "Class of content view.",
+            "is_constructor": 1,
+            "extends": "Backbone.View"
+        },
+        "Navigation": {
+            "name": "Navigation",
+            "shortname": "Navigation",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "navigation",
+            "namespace": "",
+            "file": "src/js/app/views/navigation.js",
+            "line": 18,
+            "description": "Class of navigation view.",
+            "is_constructor": 1,
+            "extends": "Backbone.View"
+        },
+        "Page": {
+            "name": "Page",
+            "shortname": "Page",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "page",
+            "namespace": "",
+            "file": "src/js/app/views/page.js",
+            "line": 23,
+            "description": "Class of application main view.",
+            "is_constructor": 1,
+            "extends": "Backbone.View"
+        },
+        "Search": {
+            "name": "Search",
+            "shortname": "Search",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "search",
+            "namespace": "",
+            "file": "src/js/app/views/search.js",
+            "line": 18,
+            "description": "Class of search widget view.",
+            "is_constructor": 1,
+            "extends": "Backbone.View"
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/js/app/collections/worklist.js",
+            "line": 1,
+            "description": "Module of work list collection.",
+            "author": "htanjo",
+            "class": "Application"
+        },
+        {
+            "file": "src/js/app/collections/worklist.js",
+            "line": 18,
+            "class": "Application"
+        },
+        {
+            "file": "src/js/app/collections/worklist.js",
+            "line": 21,
+            "description": "Associated model class.",
+            "class": "Application"
+        },
+        {
+            "file": "src/js/app/models/application.js",
+            "line": 31,
+            "description": "Showing Items.",
+            "itemtype": "property",
+            "name": "workList",
+            "type": "WorkList",
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src/js/app/models/application.js",
+            "line": 38,
+            "description": "Hit results number.",
+            "itemtype": "property",
+            "name": "hitNumber",
+            "type": "Number",
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src/js/app/models/application.js",
+            "line": 45,
+            "description": "Item number of each request.",
+            "itemtype": "property",
+            "name": "requestNumber",
+            "type": "Number",
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src/js/app/models/application.js",
+            "line": 52,
+            "description": "Loaded page number.",
+            "itemtype": "property",
+            "name": "loadedPage",
+            "type": "Number",
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src/js/app/models/application.js",
+            "line": 59,
+            "description": "All results are loaded or not.",
+            "itemtype": "property",
+            "name": "loadComplete",
+            "type": "Boolean",
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src/js/app/models/application.js",
+            "line": 66,
+            "description": "Ajax loading or not.",
+            "itemtype": "property",
+            "name": "isLoading",
+            "type": "Boolean",
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src/js/app/models/application.js",
+            "line": 73,
+            "description": "Parameters of Ajax search request.",
+            "itemtype": "property",
+            "name": "query",
+            "type": "Object",
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src/js/app/models/application.js",
+            "line": 80,
+            "description": "Active input in search box.",
+            "itemtype": "property",
+            "name": "input",
+            "type": "String",
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src/js/app/models/application.js",
+            "line": 88,
+            "description": "Construct application main model.",
+            "itemtype": "method",
+            "name": "initialize",
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src/js/app/models/application.js",
+            "line": 104,
+            "description": "Load works data.",
+            "itemtype": "method",
+            "name": "loadWorks",
+            "params": [
+                {
+                    "name": "query",
+                    "description": "",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src/js/app/models/application.js",
+            "line": 140,
+            "description": "Add works data.",
+            "itemtype": "method",
+            "name": "addWorks",
+            "params": [
+                {
+                    "name": "works",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src/js/app/models/application.js",
+            "line": 156,
+            "description": "Clear works collection.",
+            "itemtype": "method",
+            "name": "clearWorks",
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src/js/app/models/application.js",
+            "line": 166,
+            "description": "Update input text.",
+            "itemtype": "method",
+            "name": "updateInput",
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src/js/app/models/work.js",
+            "line": 28,
+            "description": "Fav or not.",
+            "itemtype": "property",
+            "name": "fav",
+            "type": "Boolean",
+            "class": "Work",
+            "module": "work"
+        },
+        {
+            "file": "src/js/app/models/work.js",
+            "line": 36,
+            "description": "Construct work model.",
+            "itemtype": "method",
+            "name": "initialize",
+            "class": "Work",
+            "module": "work"
+        },
+        {
+            "file": "src/js/app/routers/router.js",
+            "line": 28,
+            "description": "Routing definitions.",
+            "itemtype": "property",
+            "name": "routes",
+            "type": "Object",
+            "class": "Router",
+            "module": "router"
+        },
+        {
+            "file": "src/js/app/routers/router.js",
+            "line": 39,
+            "description": "Application main model.",
+            "itemtype": "property",
+            "name": "model",
+            "type": "Application",
+            "class": "Router",
+            "module": "router"
+        },
+        {
+            "file": "src/js/app/routers/router.js",
+            "line": 46,
+            "description": "Construct main router.",
+            "itemtype": "method",
+            "name": "initialize",
+            "class": "Router",
+            "module": "router"
+        },
+        {
+            "file": "src/js/app/routers/router.js",
+            "line": 59,
+            "description": "Home view.",
+            "itemtype": "method",
+            "name": "home",
+            "class": "Router",
+            "module": "router"
+        },
+        {
+            "file": "src/js/app/routers/router.js",
+            "line": 67,
+            "description": "Search view.",
+            "itemtype": "method",
+            "name": "search",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "Router",
+            "module": "router"
+        },
+        {
+            "file": "src/js/app/views/article.js",
+            "line": 29,
+            "description": "Construct article view.",
+            "itemtype": "method",
+            "name": "initialize",
+            "class": "Article",
+            "module": "article"
+        },
+        {
+            "file": "src/js/app/views/article.js",
+            "line": 37,
+            "description": "Compile HTML with template.",
+            "itemtype": "method",
+            "name": "template",
+            "params": [
+                {
+                    "name": "UNKNOWN",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Article",
+            "module": "article"
+        },
+        {
+            "file": "src/js/app/views/article.js",
+            "line": 45,
+            "description": "Render article.",
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "",
+                "type": "Article"
+            },
+            "class": "Article",
+            "module": "article"
+        },
+        {
+            "file": "src/js/app/views/content.js",
+            "line": 28,
+            "description": "Construct content view.",
+            "itemtype": "method",
+            "name": "initialize",
+            "class": "Content",
+            "module": "content"
+        },
+        {
+            "file": "src/js/app/views/content.js",
+            "line": 52,
+            "description": "Render content with collection.",
+            "itemtype": "method",
+            "name": "render",
+            "params": [
+                {
+                    "name": "work",
+                    "description": "",
+                    "type": "Work"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Content"
+            },
+            "class": "Content",
+            "module": "content"
+        },
+        {
+            "file": "src/js/app/views/content.js",
+            "line": 70,
+            "description": "Render index number.",
+            "itemtype": "method",
+            "name": "renderIndex",
+            "params": [
+                {
+                    "name": "number",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Content"
+            },
+            "class": "Content",
+            "module": "content"
+        },
+        {
+            "file": "src/js/app/views/content.js",
+            "line": 84,
+            "description": "Clear content elements.",
+            "itemtype": "method",
+            "name": "clearContent",
+            "class": "Content",
+            "module": "content"
+        },
+        {
+            "file": "src/js/app/views/navigation.js",
+            "line": 26,
+            "description": "Construct article view.",
+            "itemtype": "method",
+            "name": "initialize",
+            "class": "Navigation",
+            "module": "navigation"
+        },
+        {
+            "file": "src/js/app/views/navigation.js",
+            "line": 42,
+            "description": "Render navigation to add or clear anchor.",
+            "itemtype": "method",
+            "name": "render",
+            "params": [
+                {
+                    "name": "number",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Navigation"
+            },
+            "class": "Navigation",
+            "module": "navigation"
+        },
+        {
+            "file": "src/js/app/views/navigation.js",
+            "line": 68,
+            "description": "Update selected item.",
+            "itemtype": "method",
+            "name": "renderSelected",
+            "return": {
+                "description": "",
+                "type": "Navigation"
+            },
+            "class": "Navigation",
+            "module": "navigation"
+        },
+        {
+            "file": "src/js/app/views/navigation.js",
+            "line": 93,
+            "description": "Update position of navigation.",
+            "itemtype": "method",
+            "name": "renderPosition",
+            "return": {
+                "description": "",
+                "type": "Navigation"
+            },
+            "class": "Navigation",
+            "module": "navigation"
+        },
+        {
+            "file": "src/js/app/views/navigation.js",
+            "line": 126,
+            "description": "Scroll content area.",
+            "itemtype": "method",
+            "name": "scrollContent",
+            "class": "Navigation",
+            "module": "navigation"
+        },
+        {
+            "file": "src/js/app/views/page.js",
+            "line": 31,
+            "description": "Application model.",
+            "itemtype": "property",
+            "name": "model",
+            "type": "Backbone.Model",
+            "class": "Page",
+            "module": "page"
+        },
+        {
+            "file": "src/js/app/views/page.js",
+            "line": 38,
+            "description": "Content view.",
+            "itemtype": "property",
+            "name": "content",
+            "type": "Content",
+            "class": "Page",
+            "module": "page"
+        },
+        {
+            "file": "src/js/app/views/page.js",
+            "line": 45,
+            "description": "Search view.",
+            "itemtype": "property",
+            "name": "search",
+            "type": "Search",
+            "class": "Page",
+            "module": "page"
+        },
+        {
+            "file": "src/js/app/views/page.js",
+            "line": 52,
+            "description": "Navigation view.",
+            "itemtype": "property",
+            "name": "navigation",
+            "type": "Navigation",
+            "class": "Page",
+            "module": "page"
+        },
+        {
+            "file": "src/js/app/views/page.js",
+            "line": 59,
+            "description": "Construct application main view.",
+            "itemtype": "method",
+            "name": "initialize",
+            "class": "Page",
+            "module": "page"
+        },
+        {
+            "file": "src/js/app/views/page.js",
+            "line": 102,
+            "description": "Change view according to all loaded or not.",
+            "itemtype": "method",
+            "name": "changeLoadStatus",
+            "params": [
+                {
+                    "name": "isComplete",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "Page",
+            "module": "page"
+        },
+        {
+            "file": "src/js/app/views/page.js",
+            "line": 117,
+            "description": "Scroll event handler.",
+            "itemtype": "method",
+            "name": "detectScroll",
+            "class": "Page",
+            "module": "page"
+        },
+        {
+            "file": "src/js/app/views/search.js",
+            "line": 26,
+            "description": "DOM event binding.",
+            "itemtype": "property",
+            "name": "events",
+            "type": "Object",
+            "class": "Search",
+            "module": "search"
+        },
+        {
+            "file": "src/js/app/views/search.js",
+            "line": 39,
+            "description": "Initialize search widget view.",
+            "itemtype": "method",
+            "name": "initialize",
+            "class": "Search",
+            "module": "search"
+        },
+        {
+            "file": "src/js/app/views/search.js",
+            "line": 49,
+            "description": "Render search box.",
+            "itemtype": "method",
+            "name": "renderInput",
+            "return": {
+                "description": "",
+                "type": "Search"
+            },
+            "class": "Search",
+            "module": "search"
+        },
+        {
+            "file": "src/js/app/views/search.js",
+            "line": 69,
+            "description": "Render result view.",
+            "itemtype": "method",
+            "name": "renderResult",
+            "return": {
+                "description": "",
+                "type": "Search"
+            },
+            "class": "Search",
+            "module": "search"
+        },
+        {
+            "file": "src/js/app/views/search.js",
+            "line": 90,
+            "description": "Activate search box.",
+            "itemtype": "method",
+            "name": "activate",
+            "class": "Search",
+            "module": "search"
+        },
+        {
+            "file": "src/js/app/views/search.js",
+            "line": 98,
+            "description": "Deactivate search box when input is empty.",
+            "itemtype": "method",
+            "name": "deactivate",
+            "class": "Search",
+            "module": "search"
+        },
+        {
+            "file": "src/js/app/views/search.js",
+            "line": 108,
+            "description": "Clear search input.",
+            "itemtype": "method",
+            "name": "clear",
+            "class": "Search",
+            "module": "search"
+        },
+        {
+            "file": "src/js/app/views/search.js",
+            "line": 116,
+            "description": "Submit search query.",
+            "itemtype": "method",
+            "name": "search",
+            "class": "Search",
+            "module": "search"
+        },
+        {
+            "file": "src/js/app/views/search.js",
+            "line": 130,
+            "description": "Handle keyup event.",
+            "itemtype": "method",
+            "name": "handleInput",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "",
+                    "type": "Event"
+                }
+            ],
+            "class": "Search",
+            "module": "search"
+        },
+        {
+            "file": "src/js/app/views/search.js",
+            "line": 142,
+            "description": "Check input was changed or not.",
+            "itemtype": "method",
+            "name": "checkInputChange",
+            "class": "Search",
+            "module": "search"
+        }
+    ]
+}

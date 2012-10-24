@@ -1,0 +1,148 @@
+/**
+ * Styles for article.
+ * @author htanjo
+ */
+
+/* Article */
+.type-p .article {
+
+  @thumbnailWidth: 180px;
+
+  border-radius: 4px;
+  position: relative;
+  width: @thumbnailWidth;
+  margin-bottom: 8px;
+  padding: 30px 30px;
+  color: #333;
+  background-color: @white;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+  .transition(background-color, 200ms);
+
+  a {
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  // Highlight
+  .hilight {
+    margin: -2px;
+    padding: 2px;
+    border: none;
+    border-radius: 3px;
+    background: #ffcc00;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), inset 0 0 0 1px #ffb600;
+  }
+
+  // Tag
+  .tag {
+    margin: 0 -2px;
+    padding: 0 2px;
+    border-bottom: 1px solid #d6d6d6;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    .transition(background-color box-shadow, 120ms);
+    &:hover {
+      .hilight();
+    }
+  }
+
+  // Icon
+  .icon-director {
+    .sprite-person-red();
+  }
+  .icon-creator {
+    .sprite-person-green();
+  }
+  .icon-technique {
+    .sprite-gear();
+  }
+
+  // Details
+  .detail {
+    margin-top: 20px;
+    word-wrap: break-word;
+    > div {
+      margin-top: 10px;
+    }
+    .title {
+      margin: 5px 0 3px;
+      font-size: @baseFontSize;
+      font-weight: bold;
+    }
+    .title-sub {
+      small {
+        font-size: 100%;
+        color: #999;
+      }
+      > span,
+      small > span {
+        margin-right: 15px;
+      }
+    }
+    .person,
+    .technique {
+      margin: 0 0 3px 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        display: inline;
+        margin-right: 10px;
+      }
+    }
+    .url,
+    .directory {
+      margin-bottom: 3px;
+    }
+    .directory {
+      color: #338800;
+    }
+  }
+
+  // Image
+  .image {
+    //margin-bottom: 15px;
+    span {
+      display: block;
+      background-color: #111;
+    }
+    img {
+      width: @thumbnailWidth;
+      vertical-align: bottom;
+    }
+  }
+
+  // Status
+  .status {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  // Hover state
+  &:hover {
+    background-color: #f9f9f9;
+    //box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 8px 0 rgba(0,0,0,.6);
+    .status {
+      .sprite-fav-l();
+      &:hover {
+        .sprite-fav-l-hover();
+      }
+    }
+  }
+
+  // Fav state
+  &.fav {
+    .status,
+    .status:hover {
+      .sprite-fav-l-active();
+    }
+  }
+
+}

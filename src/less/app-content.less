@@ -1,0 +1,60 @@
+/**
+ * Styles for content section.
+ * @author htanjo
+ */
+
+/* Content */
+.type-p .content {
+
+  padding: 65px 15px 50px;
+  opacity: 0;
+  .transition(opacity, 100ms, 300ms);
+
+  // Article wrapper
+  .articles {
+    margin: 0 auto;
+  }
+
+  // Page index
+  .index {
+    display: block;
+    z-index: 5;
+    width: 240px;
+    margin-bottom: 8px;
+    padding: 15px 0;
+    border-radius: 4px;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: center;
+    color: #ccc;
+    background-color: @white;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+    cursor: default;
+    &:first-child {
+      height: 0;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    .index-page {
+      font-size: 64px;
+      font-weight: bold;
+    }
+    .index-count {
+      font-size: 12px;
+    }
+  }
+
+  // Loading icon
+  .loader {
+    padding: 20px 0;
+    border-top: 1px solid #e6e6e6;
+    text-align: center;
+  }
+
+}
+
+// Fade in content when DOM ready.
+html.ready .content {
+  opacity: 1;
+}

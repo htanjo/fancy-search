@@ -1,0 +1,97 @@
+/**
+ * Styles for modal panel.
+ * @author htanjo
+ */
+
+/* Modal panel */
+.modal {
+
+  display: none;
+  position: absolute;
+  width: 410px;
+  padding: 20px 30px;
+  border-radius: 5px;
+  color: #bbb;
+  background: #1c1c1c;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,.5);
+
+  a {
+    color: #bbb;
+    border-bottom: 1px solid #393939;
+    text-decoration: none;
+    .transition(color border-color, 150ms);
+    &:hover {
+      color: @white;
+      border-bottom: 1px solid @orange;
+    }
+  }
+
+  .modal-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #333;
+    text-align: center;
+    .inline {
+      display: inline;
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+  }
+
+  .modal-content {
+    margin-bottom: 15px;
+  }
+
+  hgroup {
+    margin: 10px 0 15px;
+    line-height: 1;
+    color: #ff8800;
+    cursor: default;
+    h1 {
+      margin: 0 0 4px 0;
+      font-size: 42px;
+      font-family: Share, sans-serif;
+      font-weight: 400;
+      text-shadow: 0 2px 2px rgba(0,0,0,.5);
+    }
+    h2 {
+      margin: 0 0 8px 0;
+      font-size: 11px;
+    }
+  }
+
+  dl {
+    margin: 0 0 3px 0;
+    font-size: 12px;
+    dt {
+      color: #ddd;
+    }
+    dd {
+      margin: 5px 0 0 0;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      li {
+        margin-right: .7em;
+        display: inline-block;
+      }
+    }
+  }
+
+  .close {
+    .sprite-close();
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    overflow: hidden;
+    text-indent: -10em;
+    cursor: pointer;
+    &:hover {
+      .sprite-close-hover();
+    }
+  }
+
+}
