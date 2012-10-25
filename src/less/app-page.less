@@ -7,7 +7,9 @@
 .page {
   min-height: 100%;
   overflow: hidden;
-  background: @whiteSmoke url(../img/bg-page.png) fixed;
+  //background: @whiteSmoke url(../img/bg-page.png) fixed;
+  background-color: @whiteSmoke;
+  .transition(background-color, 1000ms, 400ms);
 }
 
 /* Page alert */

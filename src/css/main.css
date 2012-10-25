@@ -479,7 +479,19 @@ a:hover {
 .page {
   min-height: 100%;
   overflow: hidden;
-  background: #eeeeee url(../img/bg-page.png) fixed;
+  background-color: #eeeeee;
+  transition-property: background-color;
+  transition-duration: 1000ms;
+  transition-delay: 400ms;
+  -webkit-transition-property: background-color;
+  -webkit-transition-duration: 1000ms;
+  -webkit-transition-delay: 400ms;
+  -moz-transition-property: background-color;
+  -moz-transition-duration: 1000ms;
+  -moz-transition-delay: 400ms;
+  -o-transition-property: background-color;
+  -o-transition-duration: 1000ms;
+  -o-transition-delay: 400ms;
 }
 /* Page alert */
 .page-alert {
@@ -712,16 +724,16 @@ html.ready .header {
   background-color: transparent;
   vertical-align: middle;
   z-index: 2;
-  transition-property: width background-color;
+  transition-property: width, background-color;
   transition-duration: 300ms;
   transition-delay: 0;
-  -webkit-transition-property: width background-color;
+  -webkit-transition-property: width, background-color;
   -webkit-transition-duration: 300ms;
   -webkit-transition-delay: 0;
-  -moz-transition-property: width background-color;
+  -moz-transition-property: width, background-color;
   -moz-transition-duration: 300ms;
   -moz-transition-delay: 0;
-  -o-transition-property: width background-color;
+  -o-transition-property: width, background-color;
   -o-transition-duration: 300ms;
   -o-transition-delay: 0;
 }
@@ -846,7 +858,7 @@ html.ready .header {
  * @author htanjo
  */
 /* Content */
-.type-p .content {
+.content {
   padding: 65px 15px 50px;
   opacity: 0;
   transition-property: opacity;
@@ -862,10 +874,10 @@ html.ready .header {
   -o-transition-duration: 100ms;
   -o-transition-delay: 300ms;
 }
-.type-p .content .articles {
+.content .articles {
   margin: 0 auto;
 }
-.type-p .content .index {
+.content .index {
   display: block;
   z-index: 5;
   width: 240px;
@@ -880,22 +892,21 @@ html.ready .header {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   cursor: default;
 }
-.type-p .content .index:first-child {
+.content .index:first-child {
   height: 0;
   overflow: hidden;
   margin: 0;
   padding: 0;
 }
-.type-p .content .index .index-page {
+.content .index .index-page {
   font-size: 64px;
   font-weight: bold;
 }
-.type-p .content .index .index-count {
+.content .index .index-count {
   font-size: 12px;
 }
-.type-p .content .loader {
-  padding: 20px 0;
-  border-top: 1px solid #e6e6e6;
+.content .loader {
+  padding: 40px 0 20px;
   text-align: center;
 }
 html.ready .content {
@@ -906,7 +917,7 @@ html.ready .content {
  * @author htanjo
  */
 /* Article */
-.type-p .article {
+.article {
   border-radius: 4px;
   position: relative;
   width: 180px;
@@ -915,26 +926,26 @@ html.ready .content {
   color: #333;
   background-color: #ffffff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  transition-property: background-color;
-  transition-duration: 200ms;
+  transition-property: background-color, opacity;
+  transition-duration: 250ms;
   transition-delay: 0;
-  -webkit-transition-property: background-color;
-  -webkit-transition-duration: 200ms;
+  -webkit-transition-property: background-color, opacity;
+  -webkit-transition-duration: 250ms;
   -webkit-transition-delay: 0;
-  -moz-transition-property: background-color;
-  -moz-transition-duration: 200ms;
+  -moz-transition-property: background-color, opacity;
+  -moz-transition-duration: 250ms;
   -moz-transition-delay: 0;
-  -o-transition-property: background-color;
-  -o-transition-duration: 200ms;
+  -o-transition-property: background-color, opacity;
+  -o-transition-duration: 250ms;
   -o-transition-delay: 0;
 }
-.type-p .article a {
+.article a {
   color: inherit;
 }
-.type-p .article a:hover {
+.article a:hover {
   text-decoration: none;
 }
-.type-p .article .hilight {
+.article .hilight {
   margin: -2px;
   padding: 2px;
   border: none;
@@ -942,27 +953,27 @@ html.ready .content {
   background: #ffcc00;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px #ffb600;
 }
-.type-p .article .tag {
+.article .tag {
   margin: 0 -2px;
   padding: 0 2px;
   border-bottom: 1px solid #d6d6d6;
   text-decoration: none;
   cursor: pointer;
   color: inherit;
-  transition-property: background-color box-shadow;
+  transition-property: background-color, box-shadow;
   transition-duration: 120ms;
   transition-delay: 0;
-  -webkit-transition-property: background-color box-shadow;
+  -webkit-transition-property: background-color, box-shadow;
   -webkit-transition-duration: 120ms;
   -webkit-transition-delay: 0;
-  -moz-transition-property: background-color box-shadow;
+  -moz-transition-property: background-color, box-shadow;
   -moz-transition-duration: 120ms;
   -moz-transition-delay: 0;
-  -o-transition-property: background-color box-shadow;
+  -o-transition-property: background-color, box-shadow;
   -o-transition-duration: 120ms;
   -o-transition-delay: 0;
 }
-.type-p .article .tag:hover {
+.article .tag:hover {
   margin: -2px;
   padding: 2px;
   border: none;
@@ -970,7 +981,7 @@ html.ready .content {
   background: #ffcc00;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px #ffb600;
 }
-.type-p .article .icon-director {
+.article .icon-director {
   background-image: url("../img/sprite-app.png");
   background-repeat: no-repeat;
   display: inline-block;
@@ -980,7 +991,7 @@ html.ready .content {
   height: 12px;
   background-position: -100px -200px;
 }
-.type-p .article .icon-creator {
+.article .icon-creator {
   background-image: url("../img/sprite-app.png");
   background-repeat: no-repeat;
   display: inline-block;
@@ -990,7 +1001,7 @@ html.ready .content {
   height: 12px;
   background-position: -120px -200px;
 }
-.type-p .article .icon-technique {
+.article .icon-technique {
   background-image: url("../img/sprite-app.png");
   background-repeat: no-repeat;
   display: inline-block;
@@ -1000,53 +1011,53 @@ html.ready .content {
   height: 12px;
   background-position: -140px -200px;
 }
-.type-p .article .detail {
+.article .detail {
   margin-top: 20px;
   word-wrap: break-word;
 }
-.type-p .article .detail > div {
+.article .detail > div {
   margin-top: 10px;
 }
-.type-p .article .detail .title {
+.article .detail .title {
   margin: 5px 0 3px;
   font-size: 12px;
   font-weight: bold;
 }
-.type-p .article .detail .title-sub small {
+.article .detail .title-sub small {
   font-size: 100%;
   color: #999;
 }
-.type-p .article .detail .title-sub > span,
-.type-p .article .detail .title-sub small > span {
+.article .detail .title-sub > span,
+.article .detail .title-sub small > span {
   margin-right: 15px;
 }
-.type-p .article .detail .person,
-.type-p .article .detail .technique {
+.article .detail .person,
+.article .detail .technique {
   margin: 0 0 3px 0;
   padding: 0;
   list-style-type: none;
 }
-.type-p .article .detail .person li,
-.type-p .article .detail .technique li {
+.article .detail .person li,
+.article .detail .technique li {
   display: inline;
   margin-right: 10px;
 }
-.type-p .article .detail .url,
-.type-p .article .detail .directory {
+.article .detail .url,
+.article .detail .directory {
   margin-bottom: 3px;
 }
-.type-p .article .detail .directory {
+.article .detail .directory {
   color: #338800;
 }
-.type-p .article .image span {
+.article .image span {
   display: block;
   background-color: #111;
 }
-.type-p .article .image img {
+.article .image img {
   width: 180px;
   vertical-align: bottom;
 }
-.type-p .article .status {
+.article .status {
   position: absolute;
   top: 5px;
   right: 2px;
@@ -1055,25 +1066,25 @@ html.ready .content {
   overflow: hidden;
   cursor: pointer;
 }
-.type-p .article:hover {
+.article:hover {
   background-color: #f9f9f9;
 }
-.type-p .article:hover .status {
+.article:hover .status {
   background-image: url("../img/sprite-app.png");
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
   background-position: -30px -220px;
 }
-.type-p .article:hover .status:hover {
+.article:hover .status:hover {
   background-image: url("../img/sprite-app.png");
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
   background-position: -60px -220px;
 }
-.type-p .article.fav .status,
-.type-p .article.fav .status:hover {
+.article.fav .status,
+.article.fav .status:hover {
   background-image: url("../img/sprite-app.png");
   background-repeat: no-repeat;
   width: 24px;
@@ -1133,16 +1144,16 @@ html.ready .content {
   color: #bbb;
   border-bottom: 1px solid #393939;
   text-decoration: none;
-  transition-property: color border-color;
+  transition-property: color, border-color;
   transition-duration: 150ms;
   transition-delay: 0;
-  -webkit-transition-property: color border-color;
+  -webkit-transition-property: color, border-color;
   -webkit-transition-duration: 150ms;
   -webkit-transition-delay: 0;
-  -moz-transition-property: color border-color;
+  -moz-transition-property: color, border-color;
   -moz-transition-duration: 150ms;
   -moz-transition-delay: 0;
-  -o-transition-property: color border-color;
+  -o-transition-property: color, border-color;
   -o-transition-duration: 150ms;
   -o-transition-delay: 0;
 }
@@ -1220,4 +1231,24 @@ html.ready .content {
   width: 16px;
   height: 16px;
   background-position: -180px -200px;
+}
+/**
+ * Styles for application skins.
+ * @author htanjo
+ */
+/* Page */
+.page.skin-aqua {
+  background-color: #8ec;
+}
+.page.skin-lime {
+  background-color: #ce8;
+}
+.page.skin-orange {
+  background-color: #ec8;
+}
+.page.skin-pink {
+  background-color: #e8c;
+}
+.page.skin-blue {
+  background-color: #8ce;
 }

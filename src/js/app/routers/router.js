@@ -62,6 +62,9 @@ define([
          */
         home: function () {
             this.model.set('query', {});
+            $('#page').removeClass(function (index, css) {
+                return (css.match(/\bskin-\S+/g) || []).join(' ');
+            });
         },
 
         /**
@@ -70,7 +73,9 @@ define([
          * @param {String} params
          */
         search: function (params) {
-            var query = {};
+            var query = {},
+                skins = ['aqua', 'lime', 'orange', 'pink', 'blue'],
+                skin = skins[Math.floor(Math.random() * skins.length)];
             try {
                 // Convert params to Object.
                 query = JSON.parse('{"' + decodeURIComponent(params.replace(/&/g, '\",\"').replace(/\=/g,'\":\"')) + '"}');
@@ -80,6 +85,11 @@ define([
                 // On error.
             }
             this.model.set('query', query);
+            $('#page')
+                .removeClass(function (index, css) {
+                    return (css.match(/\bskin-\S+/g) || []).join(' ');
+                })
+                .addClass('skin-' + skin);
         }
 
     });

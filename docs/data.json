@@ -581,7 +581,7 @@
         },
         {
             "file": "src/js/app/routers/router.js",
-            "line": 67,
+            "line": 70,
             "description": "Search view.",
             "itemtype": "method",
             "name": "search",
