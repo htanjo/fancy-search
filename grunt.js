@@ -19,7 +19,7 @@ module.exports = function (grunt) {
                 ' * - Handlebars.js v1.0.beta.6 <http://handlebarsjs.com/> (c) 2012 Yehuda Katz\n' +
                 ' * - jQuery Masonry v2.1.05 <http://masonry.desandro.com/> (c) 2012 David DeSandro\n' +
                 ' * - tipsy v1.0.0a <http://onehackoranother.com/projects/jquery/tipsy/> (c) 2008-2010 jason frame\n' +
-                ' * - lightbox_me v2.3 <http://buckwilson.me/lightboxme/> (c) 2010 Buck Wilson, Jive Software\n' +
+                ' * - leanModal v1.1 <http://leanmodal.finelysliced.com.au/> (c) 2012 Finely Sliced\n' +
                 ' */'
         },
 

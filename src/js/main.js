@@ -19,7 +19,7 @@ require.config({
         // Plugins
         'jq-masonry':   'libs/jquery/plugins/jquery.masonry',
         'jq-tipsy':     'libs/jquery/plugins/jquery.tipsy',
-        'jq-lightbox':  'libs/jquery/plugins/jquery.lightbox_me',
+        'jq-modal':     'libs/jquery/plugins/jquery.leanModal',
 
         // Application
         'models':       'app/models',
@@ -40,7 +40,7 @@ require.config({
             exports:    'Handlebars'
         },
         'jq-tipsy':     ['jquery'],
-        'jq-lightbox':  ['jquery']
+        'jq-modal':     ['jquery']
     }
 });
 

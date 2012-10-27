@@ -810,7 +810,7 @@
         },
         {
             "file": "src/js/app/views/page.js",
-            "line": 102,
+            "line": 101,
             "description": "Change view according to all loaded or not.",
             "itemtype": "method",
             "name": "changeLoadStatus",
@@ -826,7 +826,7 @@
         },
         {
             "file": "src/js/app/views/page.js",
-            "line": 117,
+            "line": 116,
             "description": "Scroll event handler.",
             "itemtype": "method",
             "name": "detectScroll",

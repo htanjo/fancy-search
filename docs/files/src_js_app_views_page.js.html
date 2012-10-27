@@ -134,7 +134,7 @@ define([
     &#x27;views&#x2F;search&#x27;,
     &#x27;views&#x2F;navigation&#x27;,
     &#x27;jq-tipsy&#x27;,
-    &#x27;jq-lightbox&#x27;
+    &#x27;jq-modal&#x27;
 ], function (Backbone, $, Content, Search, Navigation) {
 
     &#x2F;&#x2F; Enable Strict Mode.
@@ -189,11 +189,10 @@ define([
                 .tipsy({
                     gravity: &#x27;e&#x27;
                 })
-                .on(&#x27;click&#x27;, function (event) {
-                    $(&#x27;#about&#x27;).lightbox_me({
-                        centered: true
-                    });
-                    event.preventDefault();
+                .leanModal({
+                    top : 200,
+                    overlay : 0.4,
+                    closeButton: &#x27;.close&#x27;
                 });
 
             &#x2F;&#x2F; Events

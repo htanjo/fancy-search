@@ -1136,6 +1136,17 @@ html.ready .content {
   height: 16px;
   background-position: -180px -200px;
 }
+/* Modal overlay */
+#lean_overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: none;
+}
 /**
  * Styles for application skins.
  * @author htanjo

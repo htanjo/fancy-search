@@ -14,7 +14,7 @@ define([
     'views/search',
     'views/navigation',
     'jq-tipsy',
-    'jq-lightbox'
+    'jq-modal'
 ], function (Backbone, $, Content, Search, Navigation) {
 
     // Enable Strict Mode.
@@ -69,11 +69,10 @@ define([
                 .tipsy({
                     gravity: 'e'
                 })
-                .on('click', function (event) {
-                    $('#about').lightbox_me({
-                        centered: true
-                    });
-                    event.preventDefault();
+                .leanModal({
+                    top : 200,
+                    overlay : 0.4,
+                    closeButton: '.close'
                 });
 
             // Events
