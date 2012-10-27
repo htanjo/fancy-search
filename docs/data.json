@@ -1,7 +1,7 @@
 {
     "project": {
         "name": "Fancy Search",
-        "description": "Simple search interface with Web API.",
+        "description": "Simple search application with Web API.",
         "version": "0.1.0",
         "url": "",
         "options": {
@@ -121,7 +121,7 @@
             "file": "src/js/app/models/application.js",
             "line": 20,
             "description": "Module of Application main.",
-            "author": "htanjo"
+            "author": "Tanjo, Hiroyuki"
         },
         "work": {
             "name": "work",
@@ -135,7 +135,7 @@
             "file": "src/js/app/models/work.js",
             "line": 17,
             "description": "Module of work.",
-            "author": "htanjo"
+            "author": "Tanjo, Hiroyuki"
         },
         "router": {
             "name": "router",
@@ -149,7 +149,7 @@
             "file": "src/js/app/routers/router.js",
             "line": 20,
             "description": "Module of application main router.",
-            "author": "htanjo"
+            "author": "Tanjo, Hiroyuki"
         },
         "article": {
             "name": "article",
@@ -163,7 +163,7 @@
             "file": "src/js/app/views/article.js",
             "line": 21,
             "description": "Module of article view.",
-            "author": "htanjo"
+            "author": "Tanjo, Hiroyuki"
         },
         "content": {
             "name": "content",
@@ -177,7 +177,7 @@
             "file": "src/js/app/views/content.js",
             "line": 20,
             "description": "Module of content view.",
-            "author": "htanjo"
+            "author": "Tanjo, Hiroyuki"
         },
         "navigation": {
             "name": "navigation",
@@ -191,7 +191,7 @@
             "file": "src/js/app/views/navigation.js",
             "line": 18,
             "description": "Module of navigation view.",
-            "author": "htanjo"
+            "author": "Tanjo, Hiroyuki"
         },
         "page": {
             "name": "page",
@@ -205,7 +205,7 @@
             "file": "src/js/app/views/page.js",
             "line": 23,
             "description": "Module of application main view.",
-            "author": "htanjo"
+            "author": "Tanjo, Hiroyuki"
         },
         "search": {
             "name": "search",
@@ -220,7 +220,7 @@
             "file": "src/js/app/views/search.js",
             "line": 18,
             "description": "Module of search widget view.",
-            "author": "htanjo"
+            "author": "Tanjo, Hiroyuki"
         }
     },
     "classes": {
@@ -368,7 +368,7 @@
             "file": "src/js/app/collections/worklist.js",
             "line": 1,
             "description": "Module of work list collection.",
-            "author": "htanjo",
+            "author": "Tanjo, Hiroyuki",
             "class": "Application"
         },
         {

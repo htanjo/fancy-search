@@ -1,7 +1,7 @@
 /**
  * Module of application main router.
  * @module router
- * @author htanjo
+ * @author Tanjo, Hiroyuki
  */
 
 // Indicate global objects for JSHint.

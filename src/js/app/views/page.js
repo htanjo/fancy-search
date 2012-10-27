@@ -1,7 +1,7 @@
 /**
  * Module of application main view.
  * @module page
- * @author htanjo
+ * @author Tanjo, Hiroyuki
  */
 
 // Indicate global objects for JSHint.

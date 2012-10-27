@@ -143,7 +143,7 @@ module.exports = function (grunt) {
         yuidoc: {
             compile: {
                 name: 'Fancy Search',
-                description: 'Simple search interface with Web API.',
+                description: 'Simple search application with Web API.',
                 version: '0.1.0',
                 url: '',
                 options: {

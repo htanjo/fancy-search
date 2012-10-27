@@ -1,7 +1,7 @@
 /**
  * Module of search widget view.
  * @module search
- * @author htanjo
+ * @author Tanjo, Hiroyuki
  */
 
 // Indicate global objects for JSHint.

@@ -1,7 +1,7 @@
 /**
  * Module of work.
  * @module work
- * @author htanjo
+ * @author Tanjo, Hiroyuki
  */
 
 // Indicate global objects for JSHint.

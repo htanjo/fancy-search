@@ -1,7 +1,7 @@
 {
     "name": "fancy-search",
     "title": "Fancy Search",
-    "description": "Simple search interface with Web API.",
+    "description": "Simple search application with Web API.",
     "version": "0.1.0",
     "author": "Tanjo, Hiroyuki",
     "homepage": "http://htanjo.github.com/fancy-search/",

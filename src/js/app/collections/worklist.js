@@ -1,6 +1,6 @@
 /**
  * Module of work list collection.
- * @author htanjo
+ * @author Tanjo, Hiroyuki
  */
 
 // Indicate global objects for JSHint.

@@ -1,7 +1,7 @@
 /**
  * Module of content view.
  * @module content
- * @author htanjo
+ * @author Tanjo, Hiroyuki
  */
 
 // Indicate global objects for JSHint.

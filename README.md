@@ -1,6 +1,6 @@
 Fancy Search
 ============
-Simple search interface with Web API.
+Simple search application with Web API.
 
 <http://htanjo.github.com/fancy-search/>
 

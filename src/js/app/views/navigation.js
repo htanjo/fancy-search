@@ -1,7 +1,7 @@
 /**
  * Module of navigation view.
  * @module navigation
- * @author htanjo
+ * @author Tanjo, Hiroyuki
  */
 
 // Indicate global objects for JSHint.
