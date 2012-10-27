@@ -40,3 +40,7 @@ When build error occured in "pngmin" task in Windows, try to modify `helper.js` 
 #### Refer to:
 * <https://github.com/asciidisco/grunt-imagine/issues/3>
 * <https://github.com/asciidisco/grunt-imagine/issues/6>
+
+License
+-------
+This application is released under the MIT license.
