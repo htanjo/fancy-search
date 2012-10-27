@@ -16,7 +16,7 @@
   color: #333;
   background-color: @white;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
-  .transition(~"background-color, opacity", 250ms);
+  .transition(~"background-color 200ms, opacity 200ms 10ms");
 
   a {
     color: inherit;
@@ -43,7 +43,7 @@
     text-decoration: none;
     cursor: pointer;
     color: inherit;
-    .transition(~"background-color, box-shadow", 120ms);
+    .transition(~"background-color 120ms, box-shadow 120ms");
     &:hover {
       .hilight();
     }

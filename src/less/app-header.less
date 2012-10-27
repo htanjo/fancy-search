@@ -18,7 +18,7 @@
   background: @headerBgColor url(../img/bg-header.png) repeat-x;
   box-shadow: 0 0 5px rgba(0,0,0,.7);
   margin-top: -41px;
-  .transition(margin-top, 300ms, 300ms);
+  .transition(margin-top 300ms 300ms);
 
 // Place content width
   .header-inner {
@@ -35,11 +35,13 @@
     font-size: 15px;
     font-family: Share, sans-serif;
     font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    color: @orange;
     a {
       display: block;
       padding: 0 10px;
-      color: @orange;
       text-decoration: none;
+      color: inherit;
     }
   }
 
@@ -52,7 +54,7 @@
     overflow: hidden;
     text-align: center;
     cursor: pointer;
-    .transition(background-color, 200ms);
+    .transition(background-color 200ms);
     .fav-icon {
       .sprite-fav();
     }
@@ -89,7 +91,7 @@
       padding: 0;
       list-style-type: none;
       white-space: nowrap;
-      .transition(right, 350ms);
+      .transition(right 350ms);
     }
     li {
       display: inline-block;
@@ -97,7 +99,7 @@
       text-align: center;
       color: #ccc;
       cursor: pointer;
-      .transition(background-color, 200ms);
+      .transition(background-color 200ms);
       &:hover {
         color: @white;
         background: #222 url(../img/bg-header.png) repeat-x 0 -36px;

@@ -39,7 +39,7 @@
     background-color: transparent;
     vertical-align: middle;
     z-index: 2;
-    .transition(~"width, background-color", 300ms);
+    .transition(~"width 300ms, background-color 300ms");
     &:focus {
       .input-focus();
     }
@@ -56,7 +56,7 @@
     border-radius: 0 11px 11px 0;
     text-align: center;
     z-index: 1;
-    .transition(background-color, 120ms);
+    .transition(background-color 120ms);
     .search-icon {
       .sprite-search();
       margin-top: 4px;
@@ -74,7 +74,7 @@
     cursor: pointer;
     opacity: .5;
     z-index: 3;
-    .transition(opacity, 120ms);
+    .transition(opacity 120ms);
   }
   .search-result {
     display: none;

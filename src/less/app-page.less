@@ -3,13 +3,19 @@
  * @author htanjo
  */
 
+/* Body */
+body {
+  background-color: #dddad6;
+  background-attachment: fixed;
+  .radial-gradient(rgba(255,245,230,.5), rgba(255,245,230,0));
+  .transition(background-color 1500ms 300ms);
+}
+
 /* Page */
 .page {
   min-height: 100%;
   overflow: hidden;
-  //background: @whiteSmoke url(../img/bg-page.png) fixed;
-  background-color: @whiteSmoke;
-  .transition(background-color, 1000ms, 400ms);
+  background: url(../img/bg-page.png) fixed;
 }
 
 /* Page alert */

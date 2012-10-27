@@ -9,8 +9,6 @@
   &:after {
     display: table;
     content: "";
-    // Fixes Opera/contenteditable bug:
-    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
     line-height: 0;
   }
   &:after {
@@ -19,19 +17,20 @@
 }
 
 // Transitions
-.transition(@property, @duration, @delay:0) {
-  transition-property: @property;
-  transition-duration: @duration;
-  transition-delay: @delay;
-  -webkit-transition-property: @property;
-  -webkit-transition-duration: @duration;
-  -webkit-transition-delay: @delay;
-  -moz-transition-property: @property;
-  -moz-transition-duration: @duration;
-  -moz-transition-delay: @delay;
-  -o-transition-property: @property;
-  -o-transition-duration: @duration;
-  -o-transition-delay: @delay;
+.transition(@value) {
+  -webkit-transition: @value;
+     -moz-transition: @value;
+       -o-transition: @value;
+          transition: @value;
+}
+
+// Gradient
+.radial-gradient(@startColor, @endColor) {
+  background-image: -webkit-radial-gradient(50% 20%, circle, @startColor 20%, @endColor 90%);
+  background-image:    -moz-linear-gradient(50% 20%, circle, @startColor 20%, @endColor 90%);
+  background-image:     -ms-linear-gradient(50% 20%, circle, @startColor 20%, @endColor 90%);
+  background-image:      -o-linear-gradient(50% 20%, circle, @startColor 20%, @endColor 90%);
+  background-image:         linear-gradient(50% 20%, circle, @startColor 20%, @endColor 90%);
 }
 
 // Sprites

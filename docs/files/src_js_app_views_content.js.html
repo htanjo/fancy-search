@@ -207,6 +207,7 @@ define([
          *&#x2F;
         clearContent: function () {
             this.$(&#x27;#articles&#x27;).empty().masonry(&#x27;reload&#x27;);
+            $(&#x27;html, body&#x27;).scrollTop(0);
         }
     });
 

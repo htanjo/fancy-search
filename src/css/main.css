@@ -364,46 +364,40 @@ a:hover {
   color: #004499;
 }
 .tipsy {
-  font-size: 11px;
   position: absolute;
-  padding: 5px;
   z-index: 100000;
+  padding: 5px;
+  font-size: 11px;
 }
-.tipsy-inner {
-  background-color: #222;
-  color: #FFF;
+.tipsy .tipsy-inner {
   max-width: 200px;
   padding: 5px 8px 4px 8px;
-  text-align: center;
-}
-/* Rounded corners */
-.tipsy-inner {
   border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
+  text-align: center;
+  color: #eeeeee;
+  background-color: #292929;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
 }
-.tipsy-arrow {
+.tipsy .tipsy-arrow {
   position: absolute;
   width: 0;
   height: 0;
   line-height: 0;
-  border: 5px dashed #222;
+  border: 5px dashed #292929;
 }
-/* Rules to colour arrows */
-.tipsy-arrow-n {
-  border-bottom-color: #222;
+.tipsy .tipsy-arrow-n {
+  border-bottom-color: #292929;
 }
-.tipsy-arrow-s {
-  border-top-color: #222;
+.tipsy .tipsy-arrow-s {
+  border-top-color: #292929;
 }
-.tipsy-arrow-e {
-  border-left-color: #222;
+.tipsy .tipsy-arrow-e {
+  border-left-color: #292929;
 }
-.tipsy-arrow-w {
-  border-right-color: #222;
+.tipsy .tipsy-arrow-w {
+  border-right-color: #292929;
 }
-.tipsy-n .tipsy-arrow {
+.tipsy.tipsy-n .tipsy-arrow {
   top: 0px;
   left: 50%;
   margin-left: -5px;
@@ -412,7 +406,7 @@ a:hover {
   border-left-color: transparent;
   border-right-color: transparent;
 }
-.tipsy-nw .tipsy-arrow {
+.tipsy.tipsy-nw .tipsy-arrow {
   top: 0;
   left: 10px;
   border-bottom-style: solid;
@@ -420,7 +414,7 @@ a:hover {
   border-left-color: transparent;
   border-right-color: transparent;
 }
-.tipsy-ne .tipsy-arrow {
+.tipsy.tipsy-ne .tipsy-arrow {
   top: 0;
   right: 10px;
   border-bottom-style: solid;
@@ -428,7 +422,7 @@ a:hover {
   border-left-color: transparent;
   border-right-color: transparent;
 }
-.tipsy-s .tipsy-arrow {
+.tipsy.tipsy-s .tipsy-arrow {
   bottom: 0;
   left: 50%;
   margin-left: -5px;
@@ -437,7 +431,7 @@ a:hover {
   border-left-color: transparent;
   border-right-color: transparent;
 }
-.tipsy-sw .tipsy-arrow {
+.tipsy.tipsy-sw .tipsy-arrow {
   bottom: 0;
   left: 10px;
   border-top-style: solid;
@@ -445,7 +439,7 @@ a:hover {
   border-left-color: transparent;
   border-right-color: transparent;
 }
-.tipsy-se .tipsy-arrow {
+.tipsy.tipsy-se .tipsy-arrow {
   bottom: 0;
   right: 10px;
   border-top-style: solid;
@@ -453,7 +447,7 @@ a:hover {
   border-left-color: transparent;
   border-right-color: transparent;
 }
-.tipsy-e .tipsy-arrow {
+.tipsy.tipsy-e .tipsy-arrow {
   right: 0;
   top: 50%;
   margin-top: -5px;
@@ -462,7 +456,7 @@ a:hover {
   border-top-color: transparent;
   border-bottom-color: transparent;
 }
-.tipsy-w .tipsy-arrow {
+.tipsy.tipsy-w .tipsy-arrow {
   left: 0;
   top: 50%;
   margin-top: -5px;
@@ -475,23 +469,25 @@ a:hover {
  * Styles for application whole page.
  * @author htanjo
  */
+/* Body */
+body {
+  background-color: #dddad6;
+  background-attachment: fixed;
+  background-image: -webkit-radial-gradient(50% 20%, circle, rgba(255, 245, 230, 0.5) 20%, rgba(255, 245, 230, 0) 90%);
+  background-image: -moz-linear-gradient(50% 20%, circle, rgba(255, 245, 230, 0.5) 20%, rgba(255, 245, 230, 0) 90%);
+  background-image: -ms-linear-gradient(50% 20%, circle, rgba(255, 245, 230, 0.5) 20%, rgba(255, 245, 230, 0) 90%);
+  background-image: -o-linear-gradient(50% 20%, circle, rgba(255, 245, 230, 0.5) 20%, rgba(255, 245, 230, 0) 90%);
+  background-image: linear-gradient(50% 20%, circle, rgba(255, 245, 230, 0.5) 20%, rgba(255, 245, 230, 0) 90%);
+  -webkit-transition: background-color 1500ms 300ms;
+  -moz-transition: background-color 1500ms 300ms;
+  -o-transition: background-color 1500ms 300ms;
+  transition: background-color 1500ms 300ms;
+}
 /* Page */
 .page {
   min-height: 100%;
   overflow: hidden;
-  background-color: #eeeeee;
-  transition-property: background-color;
-  transition-duration: 1000ms;
-  transition-delay: 400ms;
-  -webkit-transition-property: background-color;
-  -webkit-transition-duration: 1000ms;
-  -webkit-transition-delay: 400ms;
-  -moz-transition-property: background-color;
-  -moz-transition-duration: 1000ms;
-  -moz-transition-delay: 400ms;
-  -o-transition-property: background-color;
-  -o-transition-duration: 1000ms;
-  -o-transition-delay: 400ms;
+  background: url(../img/bg-page.png) fixed;
 }
 /* Page alert */
 .page-alert {
@@ -530,18 +526,10 @@ html.lt-ie8 .app {
   background: #111111 url(../img/bg-header.png) repeat-x;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   margin-top: -41px;
-  transition-property: margin-top;
-  transition-duration: 300ms;
-  transition-delay: 300ms;
-  -webkit-transition-property: margin-top;
-  -webkit-transition-duration: 300ms;
-  -webkit-transition-delay: 300ms;
-  -moz-transition-property: margin-top;
-  -moz-transition-duration: 300ms;
-  -moz-transition-delay: 300ms;
-  -o-transition-property: margin-top;
-  -o-transition-duration: 300ms;
-  -o-transition-delay: 300ms;
+  -webkit-transition: margin-top 300ms 300ms;
+  -moz-transition: margin-top 300ms 300ms;
+  -o-transition: margin-top 300ms 300ms;
+  transition: margin-top 300ms 300ms;
 }
 .header .header-inner {
   width: auto;
@@ -563,12 +551,14 @@ html.lt-ie8 .app {
   font-size: 15px;
   font-family: Share, sans-serif;
   font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  color: #ff8800;
 }
 .header .title a {
   display: block;
   padding: 0 10px;
-  color: #ff8800;
   text-decoration: none;
+  color: inherit;
 }
 .header .utility {
   position: relative;
@@ -578,18 +568,10 @@ html.lt-ie8 .app {
   overflow: hidden;
   text-align: center;
   cursor: pointer;
-  transition-property: background-color;
-  transition-duration: 200ms;
-  transition-delay: 0;
-  -webkit-transition-property: background-color;
-  -webkit-transition-duration: 200ms;
-  -webkit-transition-delay: 0;
-  -moz-transition-property: background-color;
-  -moz-transition-duration: 200ms;
-  -moz-transition-delay: 0;
-  -o-transition-property: background-color;
-  -o-transition-duration: 200ms;
-  -o-transition-delay: 0;
+  -webkit-transition: background-color 200ms;
+  -moz-transition: background-color 200ms;
+  -o-transition: background-color 200ms;
+  transition: background-color 200ms;
 }
 .header .utility .fav-icon {
   background-image: url("../img/sprite-app.png");
@@ -648,18 +630,10 @@ html.lt-ie8 .app {
   padding: 0;
   list-style-type: none;
   white-space: nowrap;
-  transition-property: right;
-  transition-duration: 350ms;
-  transition-delay: 0;
-  -webkit-transition-property: right;
-  -webkit-transition-duration: 350ms;
-  -webkit-transition-delay: 0;
-  -moz-transition-property: right;
-  -moz-transition-duration: 350ms;
-  -moz-transition-delay: 0;
-  -o-transition-property: right;
-  -o-transition-duration: 350ms;
-  -o-transition-delay: 0;
+  -webkit-transition: right 350ms;
+  -moz-transition: right 350ms;
+  -o-transition: right 350ms;
+  transition: right 350ms;
 }
 .header .navigation li {
   display: inline-block;
@@ -667,18 +641,10 @@ html.lt-ie8 .app {
   text-align: center;
   color: #ccc;
   cursor: pointer;
-  transition-property: background-color;
-  transition-duration: 200ms;
-  transition-delay: 0;
-  -webkit-transition-property: background-color;
-  -webkit-transition-duration: 200ms;
-  -webkit-transition-delay: 0;
-  -moz-transition-property: background-color;
-  -moz-transition-duration: 200ms;
-  -moz-transition-delay: 0;
-  -o-transition-property: background-color;
-  -o-transition-duration: 200ms;
-  -o-transition-delay: 0;
+  -webkit-transition: background-color 200ms;
+  -moz-transition: background-color 200ms;
+  -o-transition: background-color 200ms;
+  transition: background-color 200ms;
 }
 .header .navigation li:hover {
   color: #ffffff;
@@ -724,18 +690,10 @@ html.ready .header {
   background-color: transparent;
   vertical-align: middle;
   z-index: 2;
-  transition-property: width, background-color;
-  transition-duration: 300ms;
-  transition-delay: 0;
-  -webkit-transition-property: width, background-color;
-  -webkit-transition-duration: 300ms;
-  -webkit-transition-delay: 0;
-  -moz-transition-property: width, background-color;
-  -moz-transition-duration: 300ms;
-  -moz-transition-delay: 0;
-  -o-transition-property: width, background-color;
-  -o-transition-duration: 300ms;
-  -o-transition-delay: 0;
+  -webkit-transition: width 300ms, background-color 300ms;
+  -moz-transition: width 300ms, background-color 300ms;
+  -o-transition: width 300ms, background-color 300ms;
+  transition: width 300ms, background-color 300ms;
 }
 .search .search-input:focus {
   background-color: #eee;
@@ -753,18 +711,10 @@ html.ready .header {
   border-radius: 0 11px 11px 0;
   text-align: center;
   z-index: 1;
-  transition-property: background-color;
-  transition-duration: 120ms;
-  transition-delay: 0;
-  -webkit-transition-property: background-color;
-  -webkit-transition-duration: 120ms;
-  -webkit-transition-delay: 0;
-  -moz-transition-property: background-color;
-  -moz-transition-duration: 120ms;
-  -moz-transition-delay: 0;
-  -o-transition-property: background-color;
-  -o-transition-duration: 120ms;
-  -o-transition-delay: 0;
+  -webkit-transition: background-color 120ms;
+  -moz-transition: background-color 120ms;
+  -o-transition: background-color 120ms;
+  transition: background-color 120ms;
 }
 .search .search-submit .search-icon {
   background-image: url("../img/sprite-app.png");
@@ -792,18 +742,10 @@ html.ready .header {
   cursor: pointer;
   opacity: .5;
   z-index: 3;
-  transition-property: opacity;
-  transition-duration: 120ms;
-  transition-delay: 0;
-  -webkit-transition-property: opacity;
-  -webkit-transition-duration: 120ms;
-  -webkit-transition-delay: 0;
-  -moz-transition-property: opacity;
-  -moz-transition-duration: 120ms;
-  -moz-transition-delay: 0;
-  -o-transition-property: opacity;
-  -o-transition-duration: 120ms;
-  -o-transition-delay: 0;
+  -webkit-transition: opacity 120ms;
+  -moz-transition: opacity 120ms;
+  -o-transition: opacity 120ms;
+  transition: opacity 120ms;
 }
 .search .search-result {
   display: none;
@@ -861,18 +803,10 @@ html.ready .header {
 .content {
   padding: 65px 15px 50px;
   opacity: 0;
-  transition-property: opacity;
-  transition-duration: 100ms;
-  transition-delay: 300ms;
-  -webkit-transition-property: opacity;
-  -webkit-transition-duration: 100ms;
-  -webkit-transition-delay: 300ms;
-  -moz-transition-property: opacity;
-  -moz-transition-duration: 100ms;
-  -moz-transition-delay: 300ms;
-  -o-transition-property: opacity;
-  -o-transition-duration: 100ms;
-  -o-transition-delay: 300ms;
+  -webkit-transition: opacity 100ms 300ms;
+  -moz-transition: opacity 100ms 300ms;
+  -o-transition: opacity 100ms 300ms;
+  transition: opacity 100ms 300ms;
 }
 .content .articles {
   margin: 0 auto;
@@ -887,7 +821,7 @@ html.ready .header {
   line-height: 1;
   white-space: nowrap;
   text-align: center;
-  color: #ccc;
+  color: #dddad6;
   background-color: #ffffff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   cursor: default;
@@ -901,9 +835,11 @@ html.ready .header {
 .content .index .index-page {
   font-size: 64px;
   font-weight: bold;
+  text-shadow: 0 -1px 0 #c6c1ba;
 }
 .content .index .index-count {
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: bold;
 }
 .content .loader {
   padding: 40px 0 20px;
@@ -926,18 +862,10 @@ html.ready .content {
   color: #333;
   background-color: #ffffff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  transition-property: background-color, opacity;
-  transition-duration: 250ms;
-  transition-delay: 0;
-  -webkit-transition-property: background-color, opacity;
-  -webkit-transition-duration: 250ms;
-  -webkit-transition-delay: 0;
-  -moz-transition-property: background-color, opacity;
-  -moz-transition-duration: 250ms;
-  -moz-transition-delay: 0;
-  -o-transition-property: background-color, opacity;
-  -o-transition-duration: 250ms;
-  -o-transition-delay: 0;
+  -webkit-transition: background-color 200ms, opacity 200ms 10ms;
+  -moz-transition: background-color 200ms, opacity 200ms 10ms;
+  -o-transition: background-color 200ms, opacity 200ms 10ms;
+  transition: background-color 200ms, opacity 200ms 10ms;
 }
 .article a {
   color: inherit;
@@ -960,18 +888,10 @@ html.ready .content {
   text-decoration: none;
   cursor: pointer;
   color: inherit;
-  transition-property: background-color, box-shadow;
-  transition-duration: 120ms;
-  transition-delay: 0;
-  -webkit-transition-property: background-color, box-shadow;
-  -webkit-transition-duration: 120ms;
-  -webkit-transition-delay: 0;
-  -moz-transition-property: background-color, box-shadow;
-  -moz-transition-duration: 120ms;
-  -moz-transition-delay: 0;
-  -o-transition-property: background-color, box-shadow;
-  -o-transition-duration: 120ms;
-  -o-transition-delay: 0;
+  -webkit-transition: background-color 120ms, box-shadow 120ms;
+  -moz-transition: background-color 120ms, box-shadow 120ms;
+  -o-transition: background-color 120ms, box-shadow 120ms;
+  transition: background-color 120ms, box-shadow 120ms;
 }
 .article .tag:hover {
   margin: -2px;
@@ -1109,18 +1029,10 @@ html.ready .content {
   overflow: hidden;
   opacity: .7;
   text-indent: -10em;
-  transition-property: opacity;
-  transition-duration: 120ms;
-  transition-delay: 0;
-  -webkit-transition-property: opacity;
-  -webkit-transition-duration: 120ms;
-  -webkit-transition-delay: 0;
-  -moz-transition-property: opacity;
-  -moz-transition-duration: 120ms;
-  -moz-transition-delay: 0;
-  -o-transition-property: opacity;
-  -o-transition-duration: 120ms;
-  -o-transition-delay: 0;
+  -webkit-transition: opacity 120ms;
+  -moz-transition: opacity 120ms;
+  -o-transition: opacity 120ms;
+  transition: opacity 120ms;
 }
 .tip-button:hover {
   opacity: 1;
@@ -1144,18 +1056,10 @@ html.ready .content {
   color: #bbb;
   border-bottom: 1px solid #393939;
   text-decoration: none;
-  transition-property: color, border-color;
-  transition-duration: 150ms;
-  transition-delay: 0;
-  -webkit-transition-property: color, border-color;
-  -webkit-transition-duration: 150ms;
-  -webkit-transition-delay: 0;
-  -moz-transition-property: color, border-color;
-  -moz-transition-duration: 150ms;
-  -moz-transition-delay: 0;
-  -o-transition-property: color, border-color;
-  -o-transition-duration: 150ms;
-  -o-transition-delay: 0;
+  -webkit-transition: color 150ms, border-color 150ms;
+  -moz-transition: color 150ms, border-color 150ms;
+  -o-transition: color 150ms, border-color 150ms;
+  transition: color 150ms, border-color 150ms;
 }
 .modal a:hover {
   color: #ffffff;
@@ -1236,19 +1140,66 @@ html.ready .content {
  * Styles for application skins.
  * @author htanjo
  */
-/* Page */
-.page.skin-aqua {
-  background-color: #8ec;
+.skin-aqua {
+  background-color: #8fe1f0;
 }
-.page.skin-lime {
-  background-color: #ce8;
+.skin-aqua .content .index {
+  color: #8fe1f0;
 }
-.page.skin-orange {
-  background-color: #ec8;
+.skin-aqua .content .index .index-page {
+  text-shadow: 0 -1px 0 #62d5ea;
 }
-.page.skin-pink {
-  background-color: #e8c;
+.skin-green {
+  background-color: #7ce38f;
 }
-.page.skin-blue {
-  background-color: #8ce;
+.skin-green .content .index {
+  color: #7ce38f;
+}
+.skin-green .content .index .index-page {
+  text-shadow: 0 -1px 0 #52da6b;
+}
+.skin-lime {
+  background-color: #d2ec57;
+}
+.skin-lime .content .index {
+  color: #d2ec57;
+}
+.skin-lime .content .index .index-page {
+  text-shadow: 0 -1px 0 #c6e729;
+}
+.skin-scarlet {
+  background-color: #ff8174;
+}
+.skin-scarlet .content .index {
+  color: #ff8174;
+}
+.skin-scarlet .content .index .index-page {
+  text-shadow: 0 -1px 0 #ff5341;
+}
+.skin-magenta {
+  background-color: #ff5ea2;
+}
+.skin-magenta .content .index {
+  color: #ff5ea2;
+}
+.skin-magenta .content .index .index-page {
+  text-shadow: 0 -1px 0 #ff2b85;
+}
+.skin-purple {
+  background-color: #c670ea;
+}
+.skin-purple .content .index {
+  color: #c670ea;
+}
+.skin-purple .content .index .index-page {
+  text-shadow: 0 -1px 0 #b444e3;
+}
+.skin-blue {
+  background-color: #74a8ff;
+}
+.skin-blue .content .index {
+  color: #74a8ff;
+}
+.skin-blue .content .index .index-page {
+  text-shadow: 0 -1px 0 #4188ff;
 }

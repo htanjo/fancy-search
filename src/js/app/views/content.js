@@ -87,6 +87,7 @@ define([
          */
         clearContent: function () {
             this.$('#articles').empty().masonry('reload');
+            $('html, body').scrollTop(0);
         }
     });
 

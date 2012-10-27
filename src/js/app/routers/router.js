@@ -62,7 +62,7 @@ define([
          */
         home: function () {
             this.model.set('query', {});
-            $('#page').removeClass(function (index, css) {
+            $('body').removeClass(function (index, css) {
                 return (css.match(/\bskin-\S+/g) || []).join(' ');
             });
         },
@@ -74,7 +74,7 @@ define([
          */
         search: function (params) {
             var query = {},
-                skins = ['aqua', 'lime', 'orange', 'pink', 'blue'],
+                skins = ['aqua', 'green', 'lime', 'scarlet', 'magenta', 'purple', 'blue'],
                 skin = skins[Math.floor(Math.random() * skins.length)];
             try {
                 // Convert params to Object.
@@ -85,7 +85,7 @@ define([
                 // On error.
             }
             this.model.set('query', query);
-            $('#page')
+            $('body')
                 .removeClass(function (index, css) {
                     return (css.match(/\bskin-\S+/g) || []).join(' ');
                 })

@@ -182,7 +182,7 @@ define([
          *&#x2F;
         home: function () {
             this.model.set(&#x27;query&#x27;, {});
-            $(&#x27;#page&#x27;).removeClass(function (index, css) {
+            $(&#x27;body&#x27;).removeClass(function (index, css) {
                 return (css.match(&#x2F;\bskin-\S+&#x2F;g) || []).join(&#x27; &#x27;);
             });
         },
@@ -194,7 +194,7 @@ define([
          *&#x2F;
         search: function (params) {
             var query = {},
-                skins = [&#x27;aqua&#x27;, &#x27;lime&#x27;, &#x27;orange&#x27;, &#x27;pink&#x27;, &#x27;blue&#x27;],
+                skins = [&#x27;aqua&#x27;, &#x27;green&#x27;, &#x27;lime&#x27;, &#x27;scarlet&#x27;, &#x27;magenta&#x27;, &#x27;purple&#x27;, &#x27;blue&#x27;],
                 skin = skins[Math.floor(Math.random() * skins.length)];
             try {
                 &#x2F;&#x2F; Convert params to Object.
@@ -205,7 +205,7 @@ define([
                 &#x2F;&#x2F; On error.
             }
             this.model.set(&#x27;query&#x27;, query);
-            $(&#x27;#page&#x27;)
+            $(&#x27;body&#x27;)
                 .removeClass(function (index, css) {
                     return (css.match(&#x2F;\bskin-\S+&#x2F;g) || []).join(&#x27; &#x27;);
                 })
