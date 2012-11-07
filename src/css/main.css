@@ -869,10 +869,17 @@ html.ready .content {
   transition: background-color 200ms, opacity 200ms 10ms;
 }
 .article a {
+  border-bottom: 1px solid transparent;
   color: inherit;
+  -webkit-transition: color 150ms, border-color 150ms;
+  -moz-transition: color 150ms, border-color 150ms;
+  -o-transition: color 150ms, border-color 150ms;
+  transition: color 150ms, border-color 150ms;
 }
 .article a:hover {
+  border-bottom: 1px solid #bbb;
   text-decoration: none;
+  color: #111111;
 }
 .article .hilight {
   margin: -2px;
@@ -972,7 +979,8 @@ html.ready .content {
 }
 .article .image span {
   display: block;
-  background-color: #111;
+  background-color: #eee;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 .article .image img {
   width: 180px;
