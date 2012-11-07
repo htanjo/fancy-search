@@ -129,7 +129,8 @@ module.exports = function (grunt) {
                 options: {
                     variables: {
                         '<script src="js/libs/require/require.js" data-main="js/main"></script>': '<script src="js/main.js"></script>',
-                        '@@version': '<%= pkg.version %>'
+                        '@@version': '<%= pkg.version %>',
+                        '(\\s+\\s|\\n)': ''
                     },
                     prefix: ''
                 },
