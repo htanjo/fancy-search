@@ -4,22 +4,23 @@ YUI.add("yuidoc-meta", function(Y) {
         "Application",
         "Article",
         "Content",
+        "Item",
+        "ItemList",
         "Navigation",
         "Page",
         "Router",
-        "Search",
-        "Work",
-        null
+        "Search"
     ],
     "modules": [
         "application",
         "article",
         "content",
+        "item",
+        "itemlist",
         "navigation",
         "page",
         "router",
-        "search",
-        "work"
+        "search"
     ],
     "allModules": [
         {
@@ -36,6 +37,16 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "content",
             "name": "content",
             "description": "Module of content view."
+        },
+        {
+            "displayName": "item",
+            "name": "item",
+            "description": "Module of item."
+        },
+        {
+            "displayName": "itemlist",
+            "name": "itemlist",
+            "description": "Module of item list collection."
         },
         {
             "displayName": "navigation",
@@ -56,11 +67,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "search",
             "name": "search",
             "description": "Module of search widget view."
-        },
-        {
-            "displayName": "work",
-            "name": "work",
-            "description": "Module of work."
         }
     ]
 } };

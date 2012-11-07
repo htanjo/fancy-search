@@ -10,9 +10,9 @@
 define([
     'backbone',
     'jquery',
-    'models/work',
-    'collections/worklist'
-], function (Backbone, $, Work, WorkList) {
+    'models/item',
+    'collections/itemlist'
+], function (Backbone, $, Item, ItemList) {
 
     // Enable Strict Mode.
     'use strict';
@@ -30,10 +30,10 @@ define([
 
             /**
              * Showing Items.
-             * @property workList
-             * @type WorkList
+             * @property itemList
+             * @type ItemList
              */
-            workList: null,
+            itemList: null,
 
             /**
              * Hit results number.
@@ -91,22 +91,22 @@ define([
          */
         initialize: function () {
             var self = this;
-            this.set('workList', new WorkList());
+            this.set('itemList', new ItemList());
 
             // Events
             this.on('change:query', function (Application, query) {
                 self.updateInput();
-                self.clearWorks();
-                self.loadWorks(query);
+                self.clearItems();
+                self.loadItems(query);
             });
         },
 
         /**
-         * Load works data.
-         * @method loadWorks
+         * Load items data.
+         * @method loadItems
          * @param {String} [query]
          */
-        loadWorks: function (query) {
+        loadItems: function (query) {
             var self = this,
                 request = 'http://api.rakuten.co.jp/rws/3.0/json?developerId=2221a7cc5f51e05b755ea96ecf29b297&operation=BooksTotalSearch&version=2011-12-01',
                 settingParams = {
@@ -129,7 +129,7 @@ define([
                         count = data.Body.BooksTotalSearch.count;
                     self.set('isLoading', false);
                     self.set('hitNumber', parseInt(count, 10));
-                    self.addWorks(items);
+                    self.addItems(items);
                 },
                 error: function () {
                     // On error
@@ -138,28 +138,28 @@ define([
         },
 
         /**
-         * Add works data.
-         * @method addWorks
-         * @param {Object} works
+         * Add items data.
+         * @method addItems
+         * @param {Object} items
          */
-        addWorks: function (works) {
+        addItems: function (items) {
             var i;
             this.set('loadedPage', this.get('loadedPage') + 1);
-            for (i = 0; i < works.length; i++) {
-                this.get('workList').add(new Work(works[i]));
+            for (i = 0; i < items.length; i++) {
+                this.get('itemList').add(new Item(items[i]));
             }
-            if (this.get('workList').length >= this.get('hitNumber')) {
+            if (this.get('itemList').length >= this.get('hitNumber')) {
                 this.set('loadComplete', true);
             }
         },
 
         /**
-         * Clear works collection.
-         * @method clearWorks
+         * Clear items collection.
+         * @method clearItems
          */
-        clearWorks: function () {
+        clearItems: function () {
             this.set('loadedPage', 0);
-            this.get('workList').reset();
+            this.get('itemList').reset();
             this.set('loadComplete', false);
         },
 

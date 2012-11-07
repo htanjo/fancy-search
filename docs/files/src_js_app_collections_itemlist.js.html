@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>src\js\app\collections\worklist.js - Fancy Search</title>
+    <title>src\js\app\collections\itemlist.js - Fancy Search</title>
     <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
     <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
@@ -41,13 +41,15 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
-                <li><a href="..&#x2F;classes/.html"></a></li>
-            
                 <li><a href="..&#x2F;classes/Application.html">Application</a></li>
             
                 <li><a href="..&#x2F;classes/Article.html">Article</a></li>
             
                 <li><a href="..&#x2F;classes/Content.html">Content</a></li>
+            
+                <li><a href="..&#x2F;classes/Item.html">Item</a></li>
+            
+                <li><a href="..&#x2F;classes/ItemList.html">ItemList</a></li>
             
                 <li><a href="..&#x2F;classes/Navigation.html">Navigation</a></li>
             
@@ -56,8 +58,6 @@
                 <li><a href="..&#x2F;classes/Router.html">Router</a></li>
             
                 <li><a href="..&#x2F;classes/Search.html">Search</a></li>
-            
-                <li><a href="..&#x2F;classes/Work.html">Work</a></li>
             
             </ul>
 
@@ -69,6 +69,10 @@
             
                 <li><a href="..&#x2F;modules/content.html">content</a></li>
             
+                <li><a href="..&#x2F;modules/item.html">item</a></li>
+            
+                <li><a href="..&#x2F;modules/itemlist.html">itemlist</a></li>
+            
                 <li><a href="..&#x2F;modules/navigation.html">navigation</a></li>
             
                 <li><a href="..&#x2F;modules/page.html">page</a></li>
@@ -76,8 +80,6 @@
                 <li><a href="..&#x2F;modules/router.html">router</a></li>
             
                 <li><a href="..&#x2F;modules/search.html">search</a></li>
-            
-                <li><a href="..&#x2F;modules/work.html">work</a></li>
             
             </ul>
         </div>
@@ -114,12 +116,13 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: src\js\app\collections\worklist.js</h1>
+                        <h1 class="file-heading">File: src\js\app\collections\itemlist.js</h1>
 
 <div class="file">
     <pre class="code prettyprint linenums">
 &#x2F;**
- * Module of work list collection.
+ * Module of item list collection.
+ * @module itemlist
  * @author Tanjo, Hiroyuki
  *&#x2F;
 
@@ -128,34 +131,37 @@
 
 define([
     &#x27;backbone&#x27;,
-    &#x27;models&#x2F;work&#x27;
-], function (Backbone, Work) {
+    &#x27;models&#x2F;item&#x27;
+], function (Backbone, Item) {
 
     &#x2F;&#x2F; Enable Strict Mode.
     &#x27;use strict&#x27;;
 
-    var WorkList = Backbone.Collection.extend(
-        &#x2F;** @lends WorkList.prototype *&#x2F;
-        {
+    &#x2F;**
+     * Class of item list collection.
+     * @class ItemList
+     * @constructor
+     * @extends Backbone.Collection
+     *&#x2F;
+    var ItemList = Backbone.Collection.extend({
 
-            &#x2F;**
-             * Associated model class.
-             *&#x2F;
-            model: Work,
+        &#x2F;**
+         * Associated model class.
+         * @property model
+         * @type Item
+         *&#x2F;
+        model: Item,
 
-            &#x2F;**
-             * Create work list collection.
-             * @class
-             * @augments Backbone.Collection
-             * @constructs
-             *&#x2F;
-            initialize: function () {
-            }
-
+        &#x2F;**
+         * Construct item list collection.
+         * @method initialize
+         *&#x2F;
+        initialize: function () {
         }
-    );
 
-    return WorkList;
+    });
+
+    return ItemList;
 
 });
     </pre>

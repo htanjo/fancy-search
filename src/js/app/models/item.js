@@ -1,6 +1,6 @@
 /**
- * Module of work.
- * @module work
+ * Module of item.
+ * @module item
  * @author Tanjo, Hiroyuki
  */
 
@@ -15,12 +15,12 @@ define([
     'use strict';
 
     /**
-     * Class of work model.
-     * @class Work
+     * Class of item model.
+     * @class Item
      * @constructor
      * @extends Backbone.Model
      */
-    var Work = Backbone.Model.extend({
+    var Item = Backbone.Model.extend({
 
         // Default attributes.
         defaults: {
@@ -34,13 +34,13 @@ define([
         },
 
         /**
-         * Construct work model.
+         * Construct item model.
          * @method initialize
          */
         initialize: function () {
         }
     });
 
-    return Work;
+    return Item;
 
 });

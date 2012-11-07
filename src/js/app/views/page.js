@@ -128,7 +128,7 @@ define([
                 winHeight = $(window).height();
                 offset = 500;
                 if (scrollTop >= docHeight - (winHeight + offset)) {
-                    this.model.loadWorks(this.model.get('query'));
+                    this.model.loadItems(this.model.get('query'));
                 }
             }
         }

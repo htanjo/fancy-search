@@ -10,11 +10,13 @@
         }
     },
     "files": {
-        "src\\js\\app\\collections\\worklist.js": {
-            "name": "src\\js\\app\\collections\\worklist.js",
-            "modules": {},
+        "src\\js\\app\\collections\\itemlist.js": {
+            "name": "src\\js\\app\\collections\\itemlist.js",
+            "modules": {
+                "itemlist": 1
+            },
             "classes": {
-                "": 1
+                "ItemList": 1
             },
             "fors": {},
             "namespaces": {}
@@ -30,13 +32,13 @@
             "fors": {},
             "namespaces": {}
         },
-        "src\\js\\app\\models\\work.js": {
-            "name": "src\\js\\app\\models\\work.js",
+        "src\\js\\app\\models\\item.js": {
+            "name": "src\\js\\app\\models\\item.js",
             "modules": {
-                "work": 1
+                "item": 1
             },
             "classes": {
-                "Work": 1
+                "Item": 1
             },
             "fors": {},
             "namespaces": {}
@@ -109,6 +111,20 @@
         }
     },
     "modules": {
+        "itemlist": {
+            "name": "itemlist",
+            "submodules": {},
+            "classes": {
+                "ItemList": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src\\js\\app\\collections\\itemlist.js",
+            "line": 18,
+            "description": "Module of item list collection.",
+            "author": "Tanjo, Hiroyuki"
+        },
         "application": {
             "name": "application",
             "submodules": {},
@@ -123,18 +139,18 @@
             "description": "Module of Application main.",
             "author": "Tanjo, Hiroyuki"
         },
-        "work": {
-            "name": "work",
+        "item": {
+            "name": "item",
             "submodules": {},
             "classes": {
-                "Work": 1
+                "Item": 1
             },
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "src\\js\\app\\models\\work.js",
+            "file": "src\\js\\app\\models\\item.js",
             "line": 17,
-            "description": "Module of work.",
+            "description": "Module of item.",
             "author": "Tanjo, Hiroyuki"
         },
         "router": {
@@ -211,7 +227,6 @@
             "name": "search",
             "submodules": {},
             "classes": {
-                "": 1,
                 "Search": 1
             },
             "fors": {},
@@ -224,15 +239,21 @@
         }
     },
     "classes": {
-        "": {
-            "file": "src\\js\\app\\collections\\worklist.js",
-            "line": 26,
-            "description": "Create work list collection.",
-            "uses": [
-                "Backbone.Collection"
-            ],
-            "constructs": "",
-            "module": "search"
+        "ItemList": {
+            "name": "ItemList",
+            "shortname": "ItemList",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "itemlist",
+            "namespace": "",
+            "file": "src\\js\\app\\collections\\itemlist.js",
+            "line": 18,
+            "description": "Class of item list collection.",
+            "is_constructor": 1,
+            "extends": "Backbone.Collection"
         },
         "Application": {
             "name": "Application",
@@ -250,19 +271,19 @@
             "is_constructor": 1,
             "extends": "Backbone.Model"
         },
-        "Work": {
-            "name": "Work",
-            "shortname": "Work",
+        "Item": {
+            "name": "Item",
+            "shortname": "Item",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "work",
+            "module": "item",
             "namespace": "",
-            "file": "src\\js\\app\\models\\work.js",
+            "file": "src\\js\\app\\models\\item.js",
             "line": 17,
-            "description": "Class of work model.",
+            "description": "Class of item model.",
             "is_constructor": 1,
             "extends": "Backbone.Model"
         },
@@ -365,30 +386,31 @@
     },
     "classitems": [
         {
-            "file": "src\\js\\app\\collections\\worklist.js",
-            "line": 1,
-            "description": "Module of work list collection.",
-            "author": "Tanjo, Hiroyuki",
-            "class": "Application"
-        },
-        {
-            "file": "src\\js\\app\\collections\\worklist.js",
-            "line": 18,
-            "class": "Application"
-        },
-        {
-            "file": "src\\js\\app\\collections\\worklist.js",
-            "line": 21,
+            "file": "src\\js\\app\\collections\\itemlist.js",
+            "line": 26,
             "description": "Associated model class.",
-            "class": "Application"
+            "itemtype": "property",
+            "name": "model",
+            "type": "Item",
+            "class": "ItemList",
+            "module": "itemlist"
+        },
+        {
+            "file": "src\\js\\app\\collections\\itemlist.js",
+            "line": 33,
+            "description": "Construct item list collection.",
+            "itemtype": "method",
+            "name": "initialize",
+            "class": "ItemList",
+            "module": "itemlist"
         },
         {
             "file": "src\\js\\app\\models\\application.js",
             "line": 31,
             "description": "Showing Items.",
             "itemtype": "property",
-            "name": "workList",
-            "type": "WorkList",
+            "name": "itemList",
+            "type": "ItemList",
             "class": "Application",
             "module": "application"
         },
@@ -474,9 +496,9 @@
         {
             "file": "src\\js\\app\\models\\application.js",
             "line": 104,
-            "description": "Load works data.",
+            "description": "Load items data.",
             "itemtype": "method",
-            "name": "loadWorks",
+            "name": "loadItems",
             "params": [
                 {
                     "name": "query",
@@ -491,12 +513,12 @@
         {
             "file": "src\\js\\app\\models\\application.js",
             "line": 140,
-            "description": "Add works data.",
+            "description": "Add items data.",
             "itemtype": "method",
-            "name": "addWorks",
+            "name": "addItems",
             "params": [
                 {
-                    "name": "works",
+                    "name": "items",
                     "description": "",
                     "type": "Object"
                 }
@@ -507,9 +529,9 @@
         {
             "file": "src\\js\\app\\models\\application.js",
             "line": 156,
-            "description": "Clear works collection.",
+            "description": "Clear items collection.",
             "itemtype": "method",
-            "name": "clearWorks",
+            "name": "clearItems",
             "class": "Application",
             "module": "application"
         },
@@ -523,23 +545,23 @@
             "module": "application"
         },
         {
-            "file": "src\\js\\app\\models\\work.js",
+            "file": "src\\js\\app\\models\\item.js",
             "line": 28,
             "description": "Fav or not.",
             "itemtype": "property",
             "name": "fav",
             "type": "Boolean",
-            "class": "Work",
-            "module": "work"
+            "class": "Item",
+            "module": "item"
         },
         {
-            "file": "src\\js\\app\\models\\work.js",
+            "file": "src\\js\\app\\models\\item.js",
             "line": 36,
-            "description": "Construct work model.",
+            "description": "Construct item model.",
             "itemtype": "method",
             "name": "initialize",
-            "class": "Work",
-            "module": "work"
+            "class": "Item",
+            "module": "item"
         },
         {
             "file": "src\\js\\app\\routers\\router.js",
@@ -654,9 +676,9 @@
             "name": "render",
             "params": [
                 {
-                    "name": "work",
+                    "name": "item",
                     "description": "",
-                    "type": "Work"
+                    "type": "Item"
                 }
             ],
             "return": {
@@ -942,24 +964,8 @@
     ],
     "warnings": [
         {
-            "message": "replacing incorrect tag: augments with uses",
-            "line": " src\\js\\app\\collections\\worklist.js:26"
-        },
-        {
             "message": "param name missing: {Object}",
             "line": " src\\js\\app\\views\\article.js:37"
-        },
-        {
-            "message": "Missing item type\nModule of work list collection.",
-            "line": " src\\js\\app\\collections\\worklist.js:1"
-        },
-        {
-            "message": "Missing item type",
-            "line": " src\\js\\app\\collections\\worklist.js:18"
-        },
-        {
-            "message": "Missing item type\nAssociated model class.",
-            "line": " src\\js\\app\\collections\\worklist.js:21"
         }
     ]
 }

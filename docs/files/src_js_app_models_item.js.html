@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>src\js\app\models\work.js - Fancy Search</title>
+    <title>src\js\app\models\item.js - Fancy Search</title>
     <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
     <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
@@ -41,13 +41,15 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
-                <li><a href="..&#x2F;classes/.html"></a></li>
-            
                 <li><a href="..&#x2F;classes/Application.html">Application</a></li>
             
                 <li><a href="..&#x2F;classes/Article.html">Article</a></li>
             
                 <li><a href="..&#x2F;classes/Content.html">Content</a></li>
+            
+                <li><a href="..&#x2F;classes/Item.html">Item</a></li>
+            
+                <li><a href="..&#x2F;classes/ItemList.html">ItemList</a></li>
             
                 <li><a href="..&#x2F;classes/Navigation.html">Navigation</a></li>
             
@@ -56,8 +58,6 @@
                 <li><a href="..&#x2F;classes/Router.html">Router</a></li>
             
                 <li><a href="..&#x2F;classes/Search.html">Search</a></li>
-            
-                <li><a href="..&#x2F;classes/Work.html">Work</a></li>
             
             </ul>
 
@@ -69,6 +69,10 @@
             
                 <li><a href="..&#x2F;modules/content.html">content</a></li>
             
+                <li><a href="..&#x2F;modules/item.html">item</a></li>
+            
+                <li><a href="..&#x2F;modules/itemlist.html">itemlist</a></li>
+            
                 <li><a href="..&#x2F;modules/navigation.html">navigation</a></li>
             
                 <li><a href="..&#x2F;modules/page.html">page</a></li>
@@ -76,8 +80,6 @@
                 <li><a href="..&#x2F;modules/router.html">router</a></li>
             
                 <li><a href="..&#x2F;modules/search.html">search</a></li>
-            
-                <li><a href="..&#x2F;modules/work.html">work</a></li>
             
             </ul>
         </div>
@@ -114,13 +116,13 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: src\js\app\models\work.js</h1>
+                        <h1 class="file-heading">File: src\js\app\models\item.js</h1>
 
 <div class="file">
     <pre class="code prettyprint linenums">
 &#x2F;**
- * Module of work.
- * @module work
+ * Module of item.
+ * @module item
  * @author Tanjo, Hiroyuki
  *&#x2F;
 
@@ -135,12 +137,12 @@ define([
     &#x27;use strict&#x27;;
 
     &#x2F;**
-     * Class of work model.
-     * @class Work
+     * Class of item model.
+     * @class Item
      * @constructor
      * @extends Backbone.Model
      *&#x2F;
-    var Work = Backbone.Model.extend({
+    var Item = Backbone.Model.extend({
 
         &#x2F;&#x2F; Default attributes.
         defaults: {
@@ -154,14 +156,14 @@ define([
         },
 
         &#x2F;**
-         * Construct work model.
+         * Construct item model.
          * @method initialize
          *&#x2F;
         initialize: function () {
         }
     });
 
-    return Work;
+    return Item;
 
 });
     </pre>

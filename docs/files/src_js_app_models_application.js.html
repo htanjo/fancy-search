@@ -41,13 +41,15 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
-                <li><a href="..&#x2F;classes/.html"></a></li>
-            
                 <li><a href="..&#x2F;classes/Application.html">Application</a></li>
             
                 <li><a href="..&#x2F;classes/Article.html">Article</a></li>
             
                 <li><a href="..&#x2F;classes/Content.html">Content</a></li>
+            
+                <li><a href="..&#x2F;classes/Item.html">Item</a></li>
+            
+                <li><a href="..&#x2F;classes/ItemList.html">ItemList</a></li>
             
                 <li><a href="..&#x2F;classes/Navigation.html">Navigation</a></li>
             
@@ -56,8 +58,6 @@
                 <li><a href="..&#x2F;classes/Router.html">Router</a></li>
             
                 <li><a href="..&#x2F;classes/Search.html">Search</a></li>
-            
-                <li><a href="..&#x2F;classes/Work.html">Work</a></li>
             
             </ul>
 
@@ -69,6 +69,10 @@
             
                 <li><a href="..&#x2F;modules/content.html">content</a></li>
             
+                <li><a href="..&#x2F;modules/item.html">item</a></li>
+            
+                <li><a href="..&#x2F;modules/itemlist.html">itemlist</a></li>
+            
                 <li><a href="..&#x2F;modules/navigation.html">navigation</a></li>
             
                 <li><a href="..&#x2F;modules/page.html">page</a></li>
@@ -76,8 +80,6 @@
                 <li><a href="..&#x2F;modules/router.html">router</a></li>
             
                 <li><a href="..&#x2F;modules/search.html">search</a></li>
-            
-                <li><a href="..&#x2F;modules/work.html">work</a></li>
             
             </ul>
         </div>
@@ -130,9 +132,9 @@
 define([
     &#x27;backbone&#x27;,
     &#x27;jquery&#x27;,
-    &#x27;models&#x2F;work&#x27;,
-    &#x27;collections&#x2F;worklist&#x27;
-], function (Backbone, $, Work, WorkList) {
+    &#x27;models&#x2F;item&#x27;,
+    &#x27;collections&#x2F;itemlist&#x27;
+], function (Backbone, $, Item, ItemList) {
 
     &#x2F;&#x2F; Enable Strict Mode.
     &#x27;use strict&#x27;;
@@ -150,10 +152,10 @@ define([
 
             &#x2F;**
              * Showing Items.
-             * @property workList
-             * @type WorkList
+             * @property itemList
+             * @type ItemList
              *&#x2F;
-            workList: null,
+            itemList: null,
 
             &#x2F;**
              * Hit results number.
@@ -211,22 +213,22 @@ define([
          *&#x2F;
         initialize: function () {
             var self = this;
-            this.set(&#x27;workList&#x27;, new WorkList());
+            this.set(&#x27;itemList&#x27;, new ItemList());
 
             &#x2F;&#x2F; Events
             this.on(&#x27;change:query&#x27;, function (Application, query) {
                 self.updateInput();
-                self.clearWorks();
-                self.loadWorks(query);
+                self.clearItems();
+                self.loadItems(query);
             });
         },
 
         &#x2F;**
-         * Load works data.
-         * @method loadWorks
+         * Load items data.
+         * @method loadItems
          * @param {String} [query]
          *&#x2F;
-        loadWorks: function (query) {
+        loadItems: function (query) {
             var self = this,
                 request = &#x27;http:&#x2F;&#x2F;api.rakuten.co.jp&#x2F;rws&#x2F;3.0&#x2F;json?developerId=2221a7cc5f51e05b755ea96ecf29b297&amp;operation=BooksTotalSearch&amp;version=2011-12-01&#x27;,
                 settingParams = {
@@ -249,7 +251,7 @@ define([
                         count = data.Body.BooksTotalSearch.count;
                     self.set(&#x27;isLoading&#x27;, false);
                     self.set(&#x27;hitNumber&#x27;, parseInt(count, 10));
-                    self.addWorks(items);
+                    self.addItems(items);
                 },
                 error: function () {
                     &#x2F;&#x2F; On error
@@ -258,28 +260,28 @@ define([
         },
 
         &#x2F;**
-         * Add works data.
-         * @method addWorks
-         * @param {Object} works
+         * Add items data.
+         * @method addItems
+         * @param {Object} items
          *&#x2F;
-        addWorks: function (works) {
+        addItems: function (items) {
             var i;
             this.set(&#x27;loadedPage&#x27;, this.get(&#x27;loadedPage&#x27;) + 1);
-            for (i = 0; i &lt; works.length; i++) {
-                this.get(&#x27;workList&#x27;).add(new Work(works[i]));
+            for (i = 0; i &lt; items.length; i++) {
+                this.get(&#x27;itemList&#x27;).add(new Item(items[i]));
             }
-            if (this.get(&#x27;workList&#x27;).length &gt;= this.get(&#x27;hitNumber&#x27;)) {
+            if (this.get(&#x27;itemList&#x27;).length &gt;= this.get(&#x27;hitNumber&#x27;)) {
                 this.set(&#x27;loadComplete&#x27;, true);
             }
         },
 
         &#x2F;**
-         * Clear works collection.
-         * @method clearWorks
+         * Clear items collection.
+         * @method clearItems
          *&#x2F;
-        clearWorks: function () {
+        clearItems: function () {
             this.set(&#x27;loadedPage&#x27;, 0);
-            this.get(&#x27;workList&#x27;).reset();
+            this.get(&#x27;itemList&#x27;).reset();
             this.set(&#x27;loadComplete&#x27;, false);
         },
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Fancy Search</title>
+    <title>Item - Fancy Search</title>
     <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
     <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
@@ -41,13 +41,15 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
-                <li><a href="..&#x2F;classes/.html"></a></li>
-            
                 <li><a href="..&#x2F;classes/Application.html">Application</a></li>
             
                 <li><a href="..&#x2F;classes/Article.html">Article</a></li>
             
                 <li><a href="..&#x2F;classes/Content.html">Content</a></li>
+            
+                <li><a href="..&#x2F;classes/Item.html">Item</a></li>
+            
+                <li><a href="..&#x2F;classes/ItemList.html">ItemList</a></li>
             
                 <li><a href="..&#x2F;classes/Navigation.html">Navigation</a></li>
             
@@ -56,8 +58,6 @@
                 <li><a href="..&#x2F;classes/Router.html">Router</a></li>
             
                 <li><a href="..&#x2F;classes/Search.html">Search</a></li>
-            
-                <li><a href="..&#x2F;classes/Work.html">Work</a></li>
             
             </ul>
 
@@ -69,6 +69,10 @@
             
                 <li><a href="..&#x2F;modules/content.html">content</a></li>
             
+                <li><a href="..&#x2F;modules/item.html">item</a></li>
+            
+                <li><a href="..&#x2F;modules/itemlist.html">itemlist</a></li>
+            
                 <li><a href="..&#x2F;modules/navigation.html">navigation</a></li>
             
                 <li><a href="..&#x2F;modules/page.html">page</a></li>
@@ -76,8 +80,6 @@
                 <li><a href="..&#x2F;modules/router.html">router</a></li>
             
                 <li><a href="..&#x2F;modules/search.html">search</a></li>
-            
-                <li><a href="..&#x2F;modules/work.html">work</a></li>
             
             </ul>
         </div>
@@ -114,30 +116,25 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1> Class</h1>
+                        <h1>Item Class</h1>
 <div class="box meta">
     
-        <div class="uses">
-            Uses
-            <ul class="inline commas">
-                
-                    <li><a href="Backbone.Collection.html">Backbone.Collection</a></li>
-                
-            </ul>
+
+    
+        <div class="extends">
+            Extends Backbone.Model
         </div>
     
 
     
-
-    
         <div class="foundat">
-            Defined in: <a href="..&#x2F;files&#x2F;src_js_app_collections_worklist.js.html#l26"><code>src\js\app\collections\worklist.js:26</code></a>
+            Defined in: <a href="..&#x2F;files&#x2F;src_js_app_models_item.js.html#l17"><code>src\js\app\models\item.js:17</code></a>
         </div>
     
 
     
         
-            Module: <a href="../modules/search.html">search</a>
+            Module: <a href="../modules/item.html">item</a>
         
     
 
@@ -147,9 +144,66 @@
 
 
 <div class="box intro">
-    <p>Create work list collection.</p>
+    <p>Class of item model.</p>
 </div>
 
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_Item" class="method item">
+    <h3 class="name"><code>Item</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;src_js_app_models_item.js.html#l17"><code>src\js\app\models\item.js:17</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+    </div>
 
 
 <div id="classdocs" class="tabview">
@@ -157,6 +211,10 @@
         <li class="api-class-tab index"><a href="#index">Index</a></li>
 
         
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
         
         
         
@@ -167,7 +225,37 @@
             <h2 class="off-left">Item Index</h2>
 
             
+                <div class="index-section methods">
+                    <h3>Methods</h3>
 
+                    <ul class="index-list methods extends">
+                        
+                            <li class="index-item method">
+                                <a href="#method_initialize">initialize</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties extends">
+                        
+                            <li class="index-item property">
+                                <a href="#property_fav">fav</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
             
 
             
@@ -176,7 +264,117 @@
         </div>
 
         
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
 
+                
+                    <div id="method_initialize" class="method item">
+    <h3 class="name"><code>initialize</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;src_js_app_models_item.js.html#l36"><code>src\js\app\models\item.js:36</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Construct item model.</p>
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_fav" class="property item">
+    <h3 class="name"><code>fav</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;src_js_app_models_item.js.html#l28"><code>src\js\app\models\item.js:28</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Fav or not.</p>
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+            </div>
         
 
         

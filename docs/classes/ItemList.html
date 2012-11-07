@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Work - Fancy Search</title>
+    <title>ItemList - Fancy Search</title>
     <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
     <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
@@ -41,13 +41,15 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
-                <li><a href="..&#x2F;classes/.html"></a></li>
-            
                 <li><a href="..&#x2F;classes/Application.html">Application</a></li>
             
                 <li><a href="..&#x2F;classes/Article.html">Article</a></li>
             
                 <li><a href="..&#x2F;classes/Content.html">Content</a></li>
+            
+                <li><a href="..&#x2F;classes/Item.html">Item</a></li>
+            
+                <li><a href="..&#x2F;classes/ItemList.html">ItemList</a></li>
             
                 <li><a href="..&#x2F;classes/Navigation.html">Navigation</a></li>
             
@@ -56,8 +58,6 @@
                 <li><a href="..&#x2F;classes/Router.html">Router</a></li>
             
                 <li><a href="..&#x2F;classes/Search.html">Search</a></li>
-            
-                <li><a href="..&#x2F;classes/Work.html">Work</a></li>
             
             </ul>
 
@@ -69,6 +69,10 @@
             
                 <li><a href="..&#x2F;modules/content.html">content</a></li>
             
+                <li><a href="..&#x2F;modules/item.html">item</a></li>
+            
+                <li><a href="..&#x2F;modules/itemlist.html">itemlist</a></li>
+            
                 <li><a href="..&#x2F;modules/navigation.html">navigation</a></li>
             
                 <li><a href="..&#x2F;modules/page.html">page</a></li>
@@ -76,8 +80,6 @@
                 <li><a href="..&#x2F;modules/router.html">router</a></li>
             
                 <li><a href="..&#x2F;modules/search.html">search</a></li>
-            
-                <li><a href="..&#x2F;modules/work.html">work</a></li>
             
             </ul>
         </div>
@@ -114,25 +116,25 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>Work Class</h1>
+                        <h1>ItemList Class</h1>
 <div class="box meta">
     
 
     
         <div class="extends">
-            Extends Backbone.Model
+            Extends Backbone.Collection
         </div>
     
 
     
         <div class="foundat">
-            Defined in: <a href="..&#x2F;files&#x2F;src_js_app_models_work.js.html#l17"><code>src\js\app\models\work.js:17</code></a>
+            Defined in: <a href="..&#x2F;files&#x2F;src_js_app_collections_itemlist.js.html#l18"><code>src\js\app\collections\itemlist.js:18</code></a>
         </div>
     
 
     
         
-            Module: <a href="../modules/work.html">work</a>
+            Module: <a href="../modules/itemlist.html">itemlist</a>
         
     
 
@@ -142,14 +144,14 @@
 
 
 <div class="box intro">
-    <p>Class of work model.</p>
+    <p>Class of item list collection.</p>
 </div>
 
 
     <div class="constructor">
         <h2>Constructor</h2>
-        <div id="method_Work" class="method item">
-    <h3 class="name"><code>Work</code></h3>
+        <div id="method_ItemList" class="method item">
+    <h3 class="name"><code>ItemList</code></h3>
 
     
         <span class="paren">()</span>
@@ -180,7 +182,7 @@
             
         
         
-        <a href="..&#x2F;files&#x2F;src_js_app_models_work.js.html#l17"><code>src\js\app\models\work.js:17</code></a>
+        <a href="..&#x2F;files&#x2F;src_js_app_collections_itemlist.js.html#l18"><code>src\js\app\collections\itemlist.js:18</code></a>
         
         </p>
 
@@ -246,7 +248,7 @@
                     <ul class="index-list properties extends">
                         
                             <li class="index-item property">
-                                <a href="#property_fav">fav</a>
+                                <a href="#property_model">model</a>
 
                                 
                                 
@@ -298,7 +300,7 @@
             
         
         
-        <a href="..&#x2F;files&#x2F;src_js_app_models_work.js.html#l36"><code>src\js\app\models\work.js:36</code></a>
+        <a href="..&#x2F;files&#x2F;src_js_app_collections_itemlist.js.html#l33"><code>src\js\app\collections\itemlist.js:33</code></a>
         
         </p>
 
@@ -309,7 +311,7 @@
     </div>
 
     <div class="description">
-        <p>Construct work model.</p>
+        <p>Construct item list collection.</p>
     </div>
 
     
@@ -328,9 +330,9 @@
                 <h2 class="off-left">Properties</h2>
 
                 
-                    <div id="property_fav" class="property item">
-    <h3 class="name"><code>fav</code></h3>
-    <span class="type">Boolean</span>
+                    <div id="property_model" class="property item">
+    <h3 class="name"><code>model</code></h3>
+    <span class="type"><a href="..\classes\Item.html" class="crosslink">Item</a></span>
 
     
 
@@ -351,7 +353,7 @@
             
         
         
-        <a href="..&#x2F;files&#x2F;src_js_app_models_work.js.html#l28"><code>src\js\app\models\work.js:28</code></a>
+        <a href="..&#x2F;files&#x2F;src_js_app_collections_itemlist.js.html#l26"><code>src\js\app\collections\itemlist.js:26</code></a>
         
         </p>
 
@@ -361,7 +363,7 @@
     </div>
 
     <div class="description">
-        <p>Fav or not.</p>
+        <p>Associated model class.</p>
     </div>
 
     

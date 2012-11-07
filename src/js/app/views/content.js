@@ -40,10 +40,10 @@ define([
             });
 
             // Events
-            this.model.get('workList').on('add', function(work) {
-                self.render(work);
+            this.model.get('itemList').on('add', function(item) {
+                self.render(item);
             });
-            this.model.get('workList').on('reset', this.clearContent, this);
+            this.model.get('itemList').on('reset', this.clearContent, this);
             this.model.on('change:loadedPage', function(application, page) {
                 self.renderIndex(page);
             });
@@ -52,13 +52,13 @@ define([
         /**
          * Render content with collection.
          * @method render
-         * @param {Work} work
+         * @param {Item} item
          * @return {Content}
          */
-        render: function (work) {
+        render: function (item) {
             var self = this,
                 article = new Article({
-                model: work
+                model: item
             });
             this.$('#articles').append(article.$el.css({opacity: 0}));
             article.$el.imagesLoaded(function () {
