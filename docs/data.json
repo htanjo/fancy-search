@@ -10,8 +10,8 @@
         }
     },
     "files": {
-        "src/js/app/collections/worklist.js": {
-            "name": "src/js/app/collections/worklist.js",
+        "src\\js\\app\\collections\\worklist.js": {
+            "name": "src\\js\\app\\collections\\worklist.js",
             "modules": {},
             "classes": {
                 "": 1
@@ -19,8 +19,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/js/app/models/application.js": {
-            "name": "src/js/app/models/application.js",
+        "src\\js\\app\\models\\application.js": {
+            "name": "src\\js\\app\\models\\application.js",
             "modules": {
                 "application": 1
             },
@@ -30,8 +30,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/js/app/models/work.js": {
-            "name": "src/js/app/models/work.js",
+        "src\\js\\app\\models\\work.js": {
+            "name": "src\\js\\app\\models\\work.js",
             "modules": {
                 "work": 1
             },
@@ -41,8 +41,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/js/app/routers/router.js": {
-            "name": "src/js/app/routers/router.js",
+        "src\\js\\app\\routers\\router.js": {
+            "name": "src\\js\\app\\routers\\router.js",
             "modules": {
                 "router": 1
             },
@@ -52,8 +52,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/js/app/views/article.js": {
-            "name": "src/js/app/views/article.js",
+        "src\\js\\app\\views\\article.js": {
+            "name": "src\\js\\app\\views\\article.js",
             "modules": {
                 "article": 1
             },
@@ -63,8 +63,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/js/app/views/content.js": {
-            "name": "src/js/app/views/content.js",
+        "src\\js\\app\\views\\content.js": {
+            "name": "src\\js\\app\\views\\content.js",
             "modules": {
                 "content": 1
             },
@@ -74,8 +74,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/js/app/views/navigation.js": {
-            "name": "src/js/app/views/navigation.js",
+        "src\\js\\app\\views\\navigation.js": {
+            "name": "src\\js\\app\\views\\navigation.js",
             "modules": {
                 "navigation": 1
             },
@@ -85,8 +85,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/js/app/views/page.js": {
-            "name": "src/js/app/views/page.js",
+        "src\\js\\app\\views\\page.js": {
+            "name": "src\\js\\app\\views\\page.js",
             "modules": {
                 "page": 1
             },
@@ -96,8 +96,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/js/app/views/search.js": {
-            "name": "src/js/app/views/search.js",
+        "src\\js\\app\\views\\search.js": {
+            "name": "src\\js\\app\\views\\search.js",
             "modules": {
                 "search": 1
             },
@@ -118,7 +118,7 @@
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 20,
             "description": "Module of Application main.",
             "author": "Tanjo, Hiroyuki"
@@ -132,7 +132,7 @@
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "src/js/app/models/work.js",
+            "file": "src\\js\\app\\models\\work.js",
             "line": 17,
             "description": "Module of work.",
             "author": "Tanjo, Hiroyuki"
@@ -146,7 +146,7 @@
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "src/js/app/routers/router.js",
+            "file": "src\\js\\app\\routers\\router.js",
             "line": 20,
             "description": "Module of application main router.",
             "author": "Tanjo, Hiroyuki"
@@ -160,7 +160,7 @@
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "src/js/app/views/article.js",
+            "file": "src\\js\\app\\views\\article.js",
             "line": 21,
             "description": "Module of article view.",
             "author": "Tanjo, Hiroyuki"
@@ -174,7 +174,7 @@
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "src/js/app/views/content.js",
+            "file": "src\\js\\app\\views\\content.js",
             "line": 20,
             "description": "Module of content view.",
             "author": "Tanjo, Hiroyuki"
@@ -188,7 +188,7 @@
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "src/js/app/views/navigation.js",
+            "file": "src\\js\\app\\views\\navigation.js",
             "line": 18,
             "description": "Module of navigation view.",
             "author": "Tanjo, Hiroyuki"
@@ -202,7 +202,7 @@
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "src/js/app/views/page.js",
+            "file": "src\\js\\app\\views\\page.js",
             "line": 23,
             "description": "Module of application main view.",
             "author": "Tanjo, Hiroyuki"
@@ -217,7 +217,7 @@
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "src/js/app/views/search.js",
+            "file": "src\\js\\app\\views\\search.js",
             "line": 18,
             "description": "Module of search widget view.",
             "author": "Tanjo, Hiroyuki"
@@ -225,7 +225,7 @@
     },
     "classes": {
         "": {
-            "file": "src/js/app/collections/worklist.js",
+            "file": "src\\js\\app\\collections\\worklist.js",
             "line": 26,
             "description": "Create work list collection.",
             "uses": [
@@ -244,7 +244,7 @@
             "extension_for": [],
             "module": "application",
             "namespace": "",
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 20,
             "description": "Class of application main model.",
             "is_constructor": 1,
@@ -260,7 +260,7 @@
             "extension_for": [],
             "module": "work",
             "namespace": "",
-            "file": "src/js/app/models/work.js",
+            "file": "src\\js\\app\\models\\work.js",
             "line": 17,
             "description": "Class of work model.",
             "is_constructor": 1,
@@ -276,7 +276,7 @@
             "extension_for": [],
             "module": "router",
             "namespace": "",
-            "file": "src/js/app/routers/router.js",
+            "file": "src\\js\\app\\routers\\router.js",
             "line": 20,
             "description": "Class of application main router.",
             "is_constructor": 1,
@@ -292,7 +292,7 @@
             "extension_for": [],
             "module": "article",
             "namespace": "",
-            "file": "src/js/app/views/article.js",
+            "file": "src\\js\\app\\views\\article.js",
             "line": 21,
             "description": "Class of article view.",
             "is_constructor": 1,
@@ -308,7 +308,7 @@
             "extension_for": [],
             "module": "content",
             "namespace": "",
-            "file": "src/js/app/views/content.js",
+            "file": "src\\js\\app\\views\\content.js",
             "line": 20,
             "description": "Class of content view.",
             "is_constructor": 1,
@@ -324,7 +324,7 @@
             "extension_for": [],
             "module": "navigation",
             "namespace": "",
-            "file": "src/js/app/views/navigation.js",
+            "file": "src\\js\\app\\views\\navigation.js",
             "line": 18,
             "description": "Class of navigation view.",
             "is_constructor": 1,
@@ -340,7 +340,7 @@
             "extension_for": [],
             "module": "page",
             "namespace": "",
-            "file": "src/js/app/views/page.js",
+            "file": "src\\js\\app\\views\\page.js",
             "line": 23,
             "description": "Class of application main view.",
             "is_constructor": 1,
@@ -356,7 +356,7 @@
             "extension_for": [],
             "module": "search",
             "namespace": "",
-            "file": "src/js/app/views/search.js",
+            "file": "src\\js\\app\\views\\search.js",
             "line": 18,
             "description": "Class of search widget view.",
             "is_constructor": 1,
@@ -365,25 +365,25 @@
     },
     "classitems": [
         {
-            "file": "src/js/app/collections/worklist.js",
+            "file": "src\\js\\app\\collections\\worklist.js",
             "line": 1,
             "description": "Module of work list collection.",
             "author": "Tanjo, Hiroyuki",
             "class": "Application"
         },
         {
-            "file": "src/js/app/collections/worklist.js",
+            "file": "src\\js\\app\\collections\\worklist.js",
             "line": 18,
             "class": "Application"
         },
         {
-            "file": "src/js/app/collections/worklist.js",
+            "file": "src\\js\\app\\collections\\worklist.js",
             "line": 21,
             "description": "Associated model class.",
             "class": "Application"
         },
         {
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 31,
             "description": "Showing Items.",
             "itemtype": "property",
@@ -393,7 +393,7 @@
             "module": "application"
         },
         {
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 38,
             "description": "Hit results number.",
             "itemtype": "property",
@@ -403,7 +403,7 @@
             "module": "application"
         },
         {
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 45,
             "description": "Item number of each request.",
             "itemtype": "property",
@@ -413,7 +413,7 @@
             "module": "application"
         },
         {
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 52,
             "description": "Loaded page number.",
             "itemtype": "property",
@@ -423,7 +423,7 @@
             "module": "application"
         },
         {
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 59,
             "description": "All results are loaded or not.",
             "itemtype": "property",
@@ -433,7 +433,7 @@
             "module": "application"
         },
         {
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 66,
             "description": "Ajax loading or not.",
             "itemtype": "property",
@@ -443,7 +443,7 @@
             "module": "application"
         },
         {
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 73,
             "description": "Parameters of Ajax search request.",
             "itemtype": "property",
@@ -453,7 +453,7 @@
             "module": "application"
         },
         {
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 80,
             "description": "Active input in search box.",
             "itemtype": "property",
@@ -463,7 +463,7 @@
             "module": "application"
         },
         {
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 88,
             "description": "Construct application main model.",
             "itemtype": "method",
@@ -472,7 +472,7 @@
             "module": "application"
         },
         {
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 104,
             "description": "Load works data.",
             "itemtype": "method",
@@ -489,7 +489,7 @@
             "module": "application"
         },
         {
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 140,
             "description": "Add works data.",
             "itemtype": "method",
@@ -505,7 +505,7 @@
             "module": "application"
         },
         {
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 156,
             "description": "Clear works collection.",
             "itemtype": "method",
@@ -514,7 +514,7 @@
             "module": "application"
         },
         {
-            "file": "src/js/app/models/application.js",
+            "file": "src\\js\\app\\models\\application.js",
             "line": 166,
             "description": "Update input text.",
             "itemtype": "method",
@@ -523,7 +523,7 @@
             "module": "application"
         },
         {
-            "file": "src/js/app/models/work.js",
+            "file": "src\\js\\app\\models\\work.js",
             "line": 28,
             "description": "Fav or not.",
             "itemtype": "property",
@@ -533,7 +533,7 @@
             "module": "work"
         },
         {
-            "file": "src/js/app/models/work.js",
+            "file": "src\\js\\app\\models\\work.js",
             "line": 36,
             "description": "Construct work model.",
             "itemtype": "method",
@@ -542,7 +542,7 @@
             "module": "work"
         },
         {
-            "file": "src/js/app/routers/router.js",
+            "file": "src\\js\\app\\routers\\router.js",
             "line": 28,
             "description": "Routing definitions.",
             "itemtype": "property",
@@ -552,7 +552,7 @@
             "module": "router"
         },
         {
-            "file": "src/js/app/routers/router.js",
+            "file": "src\\js\\app\\routers\\router.js",
             "line": 39,
             "description": "Application main model.",
             "itemtype": "property",
@@ -562,7 +562,7 @@
             "module": "router"
         },
         {
-            "file": "src/js/app/routers/router.js",
+            "file": "src\\js\\app\\routers\\router.js",
             "line": 46,
             "description": "Construct main router.",
             "itemtype": "method",
@@ -571,7 +571,7 @@
             "module": "router"
         },
         {
-            "file": "src/js/app/routers/router.js",
+            "file": "src\\js\\app\\routers\\router.js",
             "line": 59,
             "description": "Home view.",
             "itemtype": "method",
@@ -580,7 +580,7 @@
             "module": "router"
         },
         {
-            "file": "src/js/app/routers/router.js",
+            "file": "src\\js\\app\\routers\\router.js",
             "line": 70,
             "description": "Search view.",
             "itemtype": "method",
@@ -596,7 +596,7 @@
             "module": "router"
         },
         {
-            "file": "src/js/app/views/article.js",
+            "file": "src\\js\\app\\views\\article.js",
             "line": 29,
             "description": "Construct article view.",
             "itemtype": "method",
@@ -605,7 +605,7 @@
             "module": "article"
         },
         {
-            "file": "src/js/app/views/article.js",
+            "file": "src\\js\\app\\views\\article.js",
             "line": 37,
             "description": "Compile HTML with template.",
             "itemtype": "method",
@@ -625,7 +625,7 @@
             "module": "article"
         },
         {
-            "file": "src/js/app/views/article.js",
+            "file": "src\\js\\app\\views\\article.js",
             "line": 45,
             "description": "Render article.",
             "itemtype": "method",
@@ -638,7 +638,7 @@
             "module": "article"
         },
         {
-            "file": "src/js/app/views/content.js",
+            "file": "src\\js\\app\\views\\content.js",
             "line": 28,
             "description": "Construct content view.",
             "itemtype": "method",
@@ -647,7 +647,7 @@
             "module": "content"
         },
         {
-            "file": "src/js/app/views/content.js",
+            "file": "src\\js\\app\\views\\content.js",
             "line": 52,
             "description": "Render content with collection.",
             "itemtype": "method",
@@ -667,7 +667,7 @@
             "module": "content"
         },
         {
-            "file": "src/js/app/views/content.js",
+            "file": "src\\js\\app\\views\\content.js",
             "line": 70,
             "description": "Render index number.",
             "itemtype": "method",
@@ -687,7 +687,7 @@
             "module": "content"
         },
         {
-            "file": "src/js/app/views/content.js",
+            "file": "src\\js\\app\\views\\content.js",
             "line": 84,
             "description": "Clear content elements.",
             "itemtype": "method",
@@ -696,7 +696,7 @@
             "module": "content"
         },
         {
-            "file": "src/js/app/views/navigation.js",
+            "file": "src\\js\\app\\views\\navigation.js",
             "line": 26,
             "description": "Construct article view.",
             "itemtype": "method",
@@ -705,7 +705,7 @@
             "module": "navigation"
         },
         {
-            "file": "src/js/app/views/navigation.js",
+            "file": "src\\js\\app\\views\\navigation.js",
             "line": 42,
             "description": "Render navigation to add or clear anchor.",
             "itemtype": "method",
@@ -725,7 +725,7 @@
             "module": "navigation"
         },
         {
-            "file": "src/js/app/views/navigation.js",
+            "file": "src\\js\\app\\views\\navigation.js",
             "line": 68,
             "description": "Update selected item.",
             "itemtype": "method",
@@ -738,7 +738,7 @@
             "module": "navigation"
         },
         {
-            "file": "src/js/app/views/navigation.js",
+            "file": "src\\js\\app\\views\\navigation.js",
             "line": 93,
             "description": "Update position of navigation.",
             "itemtype": "method",
@@ -751,7 +751,7 @@
             "module": "navigation"
         },
         {
-            "file": "src/js/app/views/navigation.js",
+            "file": "src\\js\\app\\views\\navigation.js",
             "line": 126,
             "description": "Scroll content area.",
             "itemtype": "method",
@@ -760,7 +760,7 @@
             "module": "navigation"
         },
         {
-            "file": "src/js/app/views/page.js",
+            "file": "src\\js\\app\\views\\page.js",
             "line": 31,
             "description": "Application model.",
             "itemtype": "property",
@@ -770,7 +770,7 @@
             "module": "page"
         },
         {
-            "file": "src/js/app/views/page.js",
+            "file": "src\\js\\app\\views\\page.js",
             "line": 38,
             "description": "Content view.",
             "itemtype": "property",
@@ -780,7 +780,7 @@
             "module": "page"
         },
         {
-            "file": "src/js/app/views/page.js",
+            "file": "src\\js\\app\\views\\page.js",
             "line": 45,
             "description": "Search view.",
             "itemtype": "property",
@@ -790,7 +790,7 @@
             "module": "page"
         },
         {
-            "file": "src/js/app/views/page.js",
+            "file": "src\\js\\app\\views\\page.js",
             "line": 52,
             "description": "Navigation view.",
             "itemtype": "property",
@@ -800,7 +800,7 @@
             "module": "page"
         },
         {
-            "file": "src/js/app/views/page.js",
+            "file": "src\\js\\app\\views\\page.js",
             "line": 59,
             "description": "Construct application main view.",
             "itemtype": "method",
@@ -809,7 +809,7 @@
             "module": "page"
         },
         {
-            "file": "src/js/app/views/page.js",
+            "file": "src\\js\\app\\views\\page.js",
             "line": 101,
             "description": "Change view according to all loaded or not.",
             "itemtype": "method",
@@ -825,7 +825,7 @@
             "module": "page"
         },
         {
-            "file": "src/js/app/views/page.js",
+            "file": "src\\js\\app\\views\\page.js",
             "line": 116,
             "description": "Scroll event handler.",
             "itemtype": "method",
@@ -834,7 +834,7 @@
             "module": "page"
         },
         {
-            "file": "src/js/app/views/search.js",
+            "file": "src\\js\\app\\views\\search.js",
             "line": 26,
             "description": "DOM event binding.",
             "itemtype": "property",
@@ -844,7 +844,7 @@
             "module": "search"
         },
         {
-            "file": "src/js/app/views/search.js",
+            "file": "src\\js\\app\\views\\search.js",
             "line": 39,
             "description": "Initialize search widget view.",
             "itemtype": "method",
@@ -853,7 +853,7 @@
             "module": "search"
         },
         {
-            "file": "src/js/app/views/search.js",
+            "file": "src\\js\\app\\views\\search.js",
             "line": 49,
             "description": "Render search box.",
             "itemtype": "method",
@@ -866,7 +866,7 @@
             "module": "search"
         },
         {
-            "file": "src/js/app/views/search.js",
+            "file": "src\\js\\app\\views\\search.js",
             "line": 69,
             "description": "Render result view.",
             "itemtype": "method",
@@ -879,7 +879,7 @@
             "module": "search"
         },
         {
-            "file": "src/js/app/views/search.js",
+            "file": "src\\js\\app\\views\\search.js",
             "line": 90,
             "description": "Activate search box.",
             "itemtype": "method",
@@ -888,7 +888,7 @@
             "module": "search"
         },
         {
-            "file": "src/js/app/views/search.js",
+            "file": "src\\js\\app\\views\\search.js",
             "line": 98,
             "description": "Deactivate search box when input is empty.",
             "itemtype": "method",
@@ -897,7 +897,7 @@
             "module": "search"
         },
         {
-            "file": "src/js/app/views/search.js",
+            "file": "src\\js\\app\\views\\search.js",
             "line": 108,
             "description": "Clear search input.",
             "itemtype": "method",
@@ -906,7 +906,7 @@
             "module": "search"
         },
         {
-            "file": "src/js/app/views/search.js",
+            "file": "src\\js\\app\\views\\search.js",
             "line": 116,
             "description": "Submit search query.",
             "itemtype": "method",
@@ -915,7 +915,7 @@
             "module": "search"
         },
         {
-            "file": "src/js/app/views/search.js",
+            "file": "src\\js\\app\\views\\search.js",
             "line": 130,
             "description": "Handle keyup event.",
             "itemtype": "method",
@@ -931,13 +931,35 @@
             "module": "search"
         },
         {
-            "file": "src/js/app/views/search.js",
+            "file": "src\\js\\app\\views\\search.js",
             "line": 142,
             "description": "Check input was changed or not.",
             "itemtype": "method",
             "name": "checkInputChange",
             "class": "Search",
             "module": "search"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: augments with uses",
+            "line": " src\\js\\app\\collections\\worklist.js:26"
+        },
+        {
+            "message": "param name missing: {Object}",
+            "line": " src\\js\\app\\views\\article.js:37"
+        },
+        {
+            "message": "Missing item type\nModule of work list collection.",
+            "line": " src\\js\\app\\collections\\worklist.js:1"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src\\js\\app\\collections\\worklist.js:18"
+        },
+        {
+            "message": "Missing item type\nAssociated model class.",
+            "line": " src\\js\\app\\collections\\worklist.js:21"
         }
     ]
 }

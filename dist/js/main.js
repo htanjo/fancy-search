@@ -1,5 +1,5 @@
 /*!
- * Fancy Search - v0.1.0 build 2012/10/28
+ * Fancy Search - v0.1.0 build 2012/11/07
  * (c) 2011-2012 Tanjo, Hiroyuki
  * Includes:
  * - RequireJS v2.0.6 <http://requirejs.org/> (c) 2010-2012, The Dojo Foundation

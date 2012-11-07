@@ -582,7 +582,7 @@ html.lt-ie8 .app {
   margin-top: 1px;
   width: 14px;
   height: 14px;
-  background-position: -40px -200px;
+  background-position: -40px 0;
 }
 .header .utility:hover {
   background: #222222 url(../img/bg-header.png) repeat-x 0 -36px;
@@ -596,7 +596,7 @@ html.lt-ie8 .app {
   margin-top: 1px;
   width: 14px;
   height: 14px;
-  background-position: -60px -200px;
+  background-position: -60px 0;
 }
 .header .utility.active .fav-icon {
   background-image: url("../img/sprite-app.png");
@@ -606,7 +606,7 @@ html.lt-ie8 .app {
   margin-top: 1px;
   width: 14px;
   height: 14px;
-  background-position: -80px -200px;
+  background-position: -80px 0;
 }
 .header .navigation {
   position: relative;
@@ -617,7 +617,7 @@ html.lt-ie8 .app {
   background-repeat: no-repeat;
   width: 60px;
   height: 36px;
-  background-position: -150px -220px;
+  background-position: -150px -20px;
   display: block;
   position: absolute;
   z-index: 20;
@@ -724,7 +724,7 @@ html.ready .header {
   vertical-align: middle;
   width: 14px;
   height: 14px;
-  background-position: 0 -200px;
+  background-position: 0 0;
   margin-top: 4px;
   vertical-align: top;
   opacity: .5;
@@ -734,7 +734,7 @@ html.ready .header {
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-  background-position: -20px -200px;
+  background-position: -20px 0;
   display: none;
   position: absolute;
   top: 3px;
@@ -910,7 +910,7 @@ html.ready .content {
   margin-top: 1px;
   width: 12px;
   height: 12px;
-  background-position: -100px -200px;
+  background-position: -100px 0;
 }
 .article .icon-creator {
   background-image: url("../img/sprite-app.png");
@@ -920,7 +920,7 @@ html.ready .content {
   margin-top: 1px;
   width: 12px;
   height: 12px;
-  background-position: -120px -200px;
+  background-position: -120px 0;
 }
 .article .icon-technique {
   background-image: url("../img/sprite-app.png");
@@ -930,7 +930,7 @@ html.ready .content {
   margin-top: 1px;
   width: 12px;
   height: 12px;
-  background-position: -140px -200px;
+  background-position: -140px 0;
 }
 .article .detail {
   margin-top: 20px;
@@ -995,14 +995,14 @@ html.ready .content {
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
-  background-position: -30px -220px;
+  background-position: -30px -20px;
 }
 .article:hover .status:hover {
   background-image: url("../img/sprite-app.png");
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
-  background-position: -60px -220px;
+  background-position: -60px -20px;
 }
 .article.fav .status,
 .article.fav .status:hover {
@@ -1010,7 +1010,7 @@ html.ready .content {
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
-  background-position: -120px -220px;
+  background-position: -120px -20px;
 }
 /**
  * Styles for tip button.
@@ -1020,7 +1020,7 @@ html.ready .content {
 .tip-button {
   background-image: url("../img/sprite-app.png");
   background-repeat: no-repeat;
-  background-position: 0 -220px;
+  background-position: 0 -20px;
   display: block;
   position: fixed;
   right: 10px;
@@ -1121,7 +1121,7 @@ html.ready .content {
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-  background-position: -160px -200px;
+  background-position: -160px 0;
   display: block;
   position: absolute;
   top: 3px;
@@ -1135,7 +1135,7 @@ html.ready .content {
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-  background-position: -180px -200px;
+  background-position: -180px 0;
 }
 /* Modal overlay */
 #lean_overlay {
