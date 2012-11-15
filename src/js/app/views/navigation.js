@@ -56,7 +56,7 @@ define([
                 $addItem = $('<li data-anchor="#page' + number + '">' + number + '</li>');
                 $addItem.click(function () {
                     var $target = $($(this).attr('data-anchor'));
-                    $('html, body').animate({scrollTop: $target.offset().top - 43}, 250);
+                    $('html, body').animate({scrollTop: $target.offset().top - 43}, 400);
                 });
                 $list.append($addItem);
                 this.renderSelected();

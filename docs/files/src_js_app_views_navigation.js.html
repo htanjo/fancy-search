@@ -178,7 +178,7 @@ define([
                 $addItem = $(&#x27;&lt;li data-anchor=&quot;#page&#x27; + number + &#x27;&quot;&gt;&#x27; + number + &#x27;&lt;&#x2F;li&gt;&#x27;);
                 $addItem.click(function () {
                     var $target = $($(this).attr(&#x27;data-anchor&#x27;));
-                    $(&#x27;html, body&#x27;).animate({scrollTop: $target.offset().top - 43}, 250);
+                    $(&#x27;html, body&#x27;).animate({scrollTop: $target.offset().top - 43}, 400);
                 });
                 $list.append($addItem);
                 this.renderSelected();
