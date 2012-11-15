@@ -82,6 +82,14 @@ define([
             this.model.on('change:loadComplete', function (application, isComplete) {
                 self.changeLoadStatus(isComplete);
             });
+            this.model.on('change:errorMessage', function (application, errorMessage) {
+                if (errorMessage) {
+                    self.showError(errorMessage);
+                }
+                else {
+                    self.clearError();
+                }
+            });
 
             // Create child views
             this.content = new Content({
@@ -131,7 +139,25 @@ define([
                     this.model.loadItems(this.model.get('query'));
                 }
             }
+        },
+
+        /**
+         * Show error message.
+         * @method showError
+         * @param message
+         */
+        showError: function (message) {
+            $('#errorMessage').text(message).show();
+        },
+
+        /**
+         * Clear error message.
+         * @method clearError
+         */
+        clearError: function () {
+            $('#errorMessage').text('').hide();
         }
+
     });
 
     return Page;

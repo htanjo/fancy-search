@@ -82,7 +82,14 @@ define([
              * @property input
              * @type String
              */
-            input: ''
+            input: '',
+
+            /**
+             * Error message. When this is blank, nothing is wrong.
+             * @property errorMessage
+             * @type String
+             */
+            errorMessage: ''
         },
 
         /**
@@ -118,6 +125,7 @@ define([
                 //queryParams = $.isEmptyObject(query) ? {booksGenreId: '000'} : query;
                 queryParams = query;
             this.set('isLoading', true);
+            this.clearError();
             $.ajax({
                 url: request,
                 data: $.extend({}, settingParams, queryParams),
@@ -125,14 +133,27 @@ define([
                 jsonp: 'callBack',
                 timeout: 10000,
                 success: function (data) {
-                    var items = data.Body.BooksTotalSearch.Items.Item,
-                        count = data.Body.BooksTotalSearch.count;
+                    var items,
+                        count;
+                    try {
+                        items = data.Body.BooksTotalSearch.Items.Item;
+                        count = parseInt(data.Body.BooksTotalSearch.count, 10);
+                    }
+                    // Invalid response.
+                    catch (error) {
+                        items = [];
+                        count = self.get('itemList').length;
+                    }
                     self.set('isLoading', false);
-                    self.set('hitNumber', parseInt(count, 10));
+                    self.set('hitNumber', count);
                     self.addItems(items);
                 },
                 error: function () {
-                    // On error
+                    var count = self.get('itemList').length;
+                    self.detectError('Sorry. Please reload page or try again later.');
+                    self.set('isLoading', false);
+                    self.set('hitNumber', count);
+                    self.set('loadComplete', true);
                 }
             });
         },
@@ -176,6 +197,23 @@ define([
             value += (query.technique) ? ' technique:' + query.technique : '';
             value = $.trim(value);
             this.set('input', value);
+        },
+
+        /**
+         * Detect error.
+         * @method detectError
+         * @param message
+         */
+        detectError: function (message) {
+            this.set('errorMessage', message);
+        },
+
+        /**
+         * Clear error.
+         * @method clearError
+         */
+        clearError: function () {
+            this.set('errorMessage', '');
         }
     });
 

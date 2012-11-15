@@ -486,7 +486,17 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 88,
+            "line": 87,
+            "description": "Error message. When this is blank, nothing is wrong.",
+            "itemtype": "property",
+            "name": "errorMessage",
+            "type": "String",
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src\\js\\app\\models\\application.js",
+            "line": 95,
             "description": "Construct application main model.",
             "itemtype": "method",
             "name": "initialize",
@@ -495,7 +505,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 104,
+            "line": 111,
             "description": "Load items data.",
             "itemtype": "method",
             "name": "loadItems",
@@ -512,7 +522,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 140,
+            "line": 161,
             "description": "Add items data.",
             "itemtype": "method",
             "name": "addItems",
@@ -528,7 +538,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 156,
+            "line": 177,
             "description": "Clear items collection.",
             "itemtype": "method",
             "name": "clearItems",
@@ -537,10 +547,34 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 166,
+            "line": 187,
             "description": "Update input text.",
             "itemtype": "method",
             "name": "updateInput",
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src\\js\\app\\models\\application.js",
+            "line": 202,
+            "description": "Detect error.",
+            "itemtype": "method",
+            "name": "detectError",
+            "params": [
+                {
+                    "name": "message",
+                    "description": ""
+                }
+            ],
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src\\js\\app\\models\\application.js",
+            "line": 211,
+            "description": "Clear error.",
+            "itemtype": "method",
+            "name": "clearError",
             "class": "Application",
             "module": "application"
         },
@@ -832,7 +866,7 @@
         },
         {
             "file": "src\\js\\app\\views\\page.js",
-            "line": 101,
+            "line": 109,
             "description": "Change view according to all loaded or not.",
             "itemtype": "method",
             "name": "changeLoadStatus",
@@ -848,10 +882,34 @@
         },
         {
             "file": "src\\js\\app\\views\\page.js",
-            "line": 116,
+            "line": 124,
             "description": "Scroll event handler.",
             "itemtype": "method",
             "name": "detectScroll",
+            "class": "Page",
+            "module": "page"
+        },
+        {
+            "file": "src\\js\\app\\views\\page.js",
+            "line": 144,
+            "description": "Show error message.",
+            "itemtype": "method",
+            "name": "showError",
+            "params": [
+                {
+                    "name": "message",
+                    "description": ""
+                }
+            ],
+            "class": "Page",
+            "module": "page"
+        },
+        {
+            "file": "src\\js\\app\\views\\page.js",
+            "line": 153,
+            "description": "Clear error message.",
+            "itemtype": "method",
+            "name": "clearError",
             "class": "Page",
             "module": "page"
         },

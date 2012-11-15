@@ -204,7 +204,14 @@ define([
              * @property input
              * @type String
              *&#x2F;
-            input: &#x27;&#x27;
+            input: &#x27;&#x27;,
+
+            &#x2F;**
+             * Error message. When this is blank, nothing is wrong.
+             * @property errorMessage
+             * @type String
+             *&#x2F;
+            errorMessage: &#x27;&#x27;
         },
 
         &#x2F;**
@@ -240,6 +247,7 @@ define([
                 &#x2F;&#x2F;queryParams = $.isEmptyObject(query) ? {booksGenreId: &#x27;000&#x27;} : query;
                 queryParams = query;
             this.set(&#x27;isLoading&#x27;, true);
+            this.clearError();
             $.ajax({
                 url: request,
                 data: $.extend({}, settingParams, queryParams),
@@ -247,14 +255,27 @@ define([
                 jsonp: &#x27;callBack&#x27;,
                 timeout: 10000,
                 success: function (data) {
-                    var items = data.Body.BooksTotalSearch.Items.Item,
-                        count = data.Body.BooksTotalSearch.count;
+                    var items,
+                        count;
+                    try {
+                        items = data.Body.BooksTotalSearch.Items.Item;
+                        count = parseInt(data.Body.BooksTotalSearch.count, 10);
+                    }
+                    &#x2F;&#x2F; Invalid response.
+                    catch (error) {
+                        items = [];
+                        count = self.get(&#x27;itemList&#x27;).length;
+                    }
                     self.set(&#x27;isLoading&#x27;, false);
-                    self.set(&#x27;hitNumber&#x27;, parseInt(count, 10));
+                    self.set(&#x27;hitNumber&#x27;, count);
                     self.addItems(items);
                 },
                 error: function () {
-                    &#x2F;&#x2F; On error
+                    var count = self.get(&#x27;itemList&#x27;).length;
+                    self.detectError(&#x27;Sorry. Please reload page or try again later.&#x27;);
+                    self.set(&#x27;isLoading&#x27;, false);
+                    self.set(&#x27;hitNumber&#x27;, count);
+                    self.set(&#x27;loadComplete&#x27;, true);
                 }
             });
         },
@@ -298,6 +319,23 @@ define([
             value += (query.technique) ? &#x27; technique:&#x27; + query.technique : &#x27;&#x27;;
             value = $.trim(value);
             this.set(&#x27;input&#x27;, value);
+        },
+
+        &#x2F;**
+         * Detect error.
+         * @method detectError
+         * @param message
+         *&#x2F;
+        detectError: function (message) {
+            this.set(&#x27;errorMessage&#x27;, message);
+        },
+
+        &#x2F;**
+         * Clear error.
+         * @method clearError
+         *&#x2F;
+        clearError: function () {
+            this.set(&#x27;errorMessage&#x27;, &#x27;&#x27;);
         }
     });
 

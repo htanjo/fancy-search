@@ -204,6 +204,14 @@ define([
             this.model.on(&#x27;change:loadComplete&#x27;, function (application, isComplete) {
                 self.changeLoadStatus(isComplete);
             });
+            this.model.on(&#x27;change:errorMessage&#x27;, function (application, errorMessage) {
+                if (errorMessage) {
+                    self.showError(errorMessage);
+                }
+                else {
+                    self.clearError();
+                }
+            });
 
             &#x2F;&#x2F; Create child views
             this.content = new Content({
@@ -253,7 +261,25 @@ define([
                     this.model.loadItems(this.model.get(&#x27;query&#x27;));
                 }
             }
+        },
+
+        &#x2F;**
+         * Show error message.
+         * @method showError
+         * @param message
+         *&#x2F;
+        showError: function (message) {
+            $(&#x27;#errorMessage&#x27;).text(message).show();
+        },
+
+        &#x2F;**
+         * Clear error message.
+         * @method clearError
+         *&#x2F;
+        clearError: function () {
+            $(&#x27;#errorMessage&#x27;).text(&#x27;&#x27;).hide();
         }
+
     });
 
     return Page;

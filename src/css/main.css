@@ -494,9 +494,11 @@ body {
 .page-alert {
   display: none;
   width: 950px;
-  margin: 100px auto;
+  margin: 0 auto;
+  padding: 150px 0 20px;
   text-align: center;
   font-weight: bold;
+  opacity: .7;
 }
 html.no-js .page-alert.no-js {
   display: block;
@@ -843,8 +845,11 @@ html.ready .header {
   font-weight: bold;
 }
 .content .loader {
-  padding: 40px 0 20px;
+  padding: 70px 0 20px;
   text-align: center;
+}
+.content .page-alert {
+  padding: 70px 0 20px;
 }
 html.ready .content {
   opacity: 1;
