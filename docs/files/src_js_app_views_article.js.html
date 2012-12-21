@@ -154,6 +154,8 @@ define([
          *&#x2F;
         initialize: function () {
             this.render();
+            this.updateStatus();
+            this.model.on(&#x27;change&#x27;, this.updateStatus, this);
         },
 
         &#x2F;**
@@ -170,14 +172,32 @@ define([
          * @return {Article}
          *&#x2F;
         render: function () {
+            var self = this;
             this.$el = $(this.template(this.model.toJSON()));
 
             &#x2F;&#x2F; Init DOM elements.
-            this.$(&#x27;.status&#x27;).tipsy({
-                gravity: &#x27;s&#x27;
-            });
+            this.$(&#x27;.status&#x27;)
+                .tipsy({
+                    gravity: &#x27;s&#x27;
+                })
+                .click(function () {
+                    self.model.set(&#x27;fav&#x27;, !self.model.get(&#x27;fav&#x27;));
+                });
 
             return this;
+        },
+
+        &#x2F;**
+         * Render to update status.
+         * @method updateStatus
+         *&#x2F;
+        updateStatus: function () {
+            if (this.model.get(&#x27;fav&#x27;)) {
+                this.$el.addClass(&#x27;fav&#x27;);
+            }
+            else {
+                this.$el.removeClass(&#x27;fav&#x27;);
+            }
         }
     });
 

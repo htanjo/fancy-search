@@ -121,7 +121,7 @@
             "namespaces": {},
             "tag": "module",
             "file": "src\\js\\app\\collections\\itemlist.js",
-            "line": 18,
+            "line": 19,
             "description": "Module of item list collection.",
             "author": "Tanjo, Hiroyuki"
         },
@@ -135,7 +135,7 @@
             "namespaces": {},
             "tag": "module",
             "file": "src\\js\\app\\models\\application.js",
-            "line": 20,
+            "line": 21,
             "description": "Module of Application main.",
             "author": "Tanjo, Hiroyuki"
         },
@@ -250,7 +250,7 @@
             "module": "itemlist",
             "namespace": "",
             "file": "src\\js\\app\\collections\\itemlist.js",
-            "line": 18,
+            "line": 19,
             "description": "Class of item list collection.",
             "is_constructor": 1,
             "extends": "Backbone.Collection"
@@ -266,7 +266,7 @@
             "module": "application",
             "namespace": "",
             "file": "src\\js\\app\\models\\application.js",
-            "line": 20,
+            "line": 21,
             "description": "Class of application main model.",
             "is_constructor": 1,
             "extends": "Backbone.Model"
@@ -387,7 +387,7 @@
     "classitems": [
         {
             "file": "src\\js\\app\\collections\\itemlist.js",
-            "line": 26,
+            "line": 27,
             "description": "Associated model class.",
             "itemtype": "property",
             "name": "model",
@@ -397,7 +397,7 @@
         },
         {
             "file": "src\\js\\app\\collections\\itemlist.js",
-            "line": 33,
+            "line": 36,
             "description": "Construct item list collection.",
             "itemtype": "method",
             "name": "initialize",
@@ -406,7 +406,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 31,
+            "line": 32,
             "description": "Showing Items.",
             "itemtype": "property",
             "name": "itemList",
@@ -416,7 +416,17 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 38,
+            "line": 39,
+            "description": "Fav Items.",
+            "itemtype": "property",
+            "name": "favItemList",
+            "type": "ItemList",
+            "class": "Application",
+            "module": "application"
+        },
+        {
+            "file": "src\\js\\app\\models\\application.js",
+            "line": 46,
             "description": "Hit results number.",
             "itemtype": "property",
             "name": "hitNumber",
@@ -426,7 +436,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 45,
+            "line": 53,
             "description": "Item number of each request.",
             "itemtype": "property",
             "name": "requestNumber",
@@ -436,7 +446,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 52,
+            "line": 60,
             "description": "Loaded page number.",
             "itemtype": "property",
             "name": "loadedPage",
@@ -446,7 +456,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 59,
+            "line": 67,
             "description": "All results are loaded or not.",
             "itemtype": "property",
             "name": "loadComplete",
@@ -456,7 +466,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 66,
+            "line": 74,
             "description": "Ajax loading or not.",
             "itemtype": "property",
             "name": "isLoading",
@@ -466,7 +476,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 73,
+            "line": 81,
             "description": "Parameters of Ajax search request.",
             "itemtype": "property",
             "name": "query",
@@ -476,7 +486,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 80,
+            "line": 88,
             "description": "Active input in search box.",
             "itemtype": "property",
             "name": "input",
@@ -486,7 +496,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 87,
+            "line": 95,
             "description": "Error message. When this is blank, nothing is wrong.",
             "itemtype": "property",
             "name": "errorMessage",
@@ -496,7 +506,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 95,
+            "line": 103,
             "description": "Construct application main model.",
             "itemtype": "method",
             "name": "initialize",
@@ -505,7 +515,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 111,
+            "line": 123,
             "description": "Load items data.",
             "itemtype": "method",
             "name": "loadItems",
@@ -522,7 +532,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 161,
+            "line": 173,
             "description": "Add items data.",
             "itemtype": "method",
             "name": "addItems",
@@ -538,7 +548,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 177,
+            "line": 209,
             "description": "Clear items collection.",
             "itemtype": "method",
             "name": "clearItems",
@@ -547,7 +557,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 187,
+            "line": 219,
             "description": "Update input text.",
             "itemtype": "method",
             "name": "updateInput",
@@ -556,7 +566,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 202,
+            "line": 234,
             "description": "Detect error.",
             "itemtype": "method",
             "name": "detectError",
@@ -571,7 +581,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 211,
+            "line": 243,
             "description": "Clear error.",
             "itemtype": "method",
             "name": "clearError",
@@ -662,7 +672,7 @@
         },
         {
             "file": "src\\js\\app\\views\\article.js",
-            "line": 37,
+            "line": 39,
             "description": "Compile HTML with template.",
             "itemtype": "method",
             "name": "template",
@@ -682,7 +692,7 @@
         },
         {
             "file": "src\\js\\app\\views\\article.js",
-            "line": 45,
+            "line": 47,
             "description": "Render article.",
             "itemtype": "method",
             "name": "render",
@@ -690,6 +700,15 @@
                 "description": "",
                 "type": "Article"
             },
+            "class": "Article",
+            "module": "article"
+        },
+        {
+            "file": "src\\js\\app\\views\\article.js",
+            "line": 68,
+            "description": "Render to update status.",
+            "itemtype": "method",
+            "name": "updateStatus",
             "class": "Article",
             "module": "article"
         },
@@ -1023,7 +1042,7 @@
     "warnings": [
         {
             "message": "param name missing: {Object}",
-            "line": " src\\js\\app\\views\\article.js:37"
+            "line": " src\\js\\app\\views\\article.js:39"
         }
     ]
 }

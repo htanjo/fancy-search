@@ -131,7 +131,8 @@
 
 define([
     &#x27;backbone&#x27;,
-    &#x27;models&#x2F;item&#x27;
+    &#x27;models&#x2F;item&#x27;,
+    &#x27;bb-localstorage&#x27;
 ], function (Backbone, Item) {
 
     &#x2F;&#x2F; Enable Strict Mode.
@@ -151,6 +152,8 @@ define([
          * @type Item
          *&#x2F;
         model: Item,
+
+        localStorage: new Backbone.LocalStorage(&#x27;fancySearchFavs&#x27;),
 
         &#x2F;**
          * Construct item list collection.

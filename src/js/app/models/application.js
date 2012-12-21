@@ -11,7 +11,8 @@ define([
     'backbone',
     'jquery',
     'models/item',
-    'collections/itemlist'
+    'collections/itemlist',
+    'bb-localstorage'
 ], function (Backbone, $, Item, ItemList) {
 
     // Enable Strict Mode.
@@ -34,6 +35,13 @@ define([
              * @type ItemList
              */
             itemList: null,
+
+            /**
+             * Fav Items.
+             * @property favItemList
+             * @type ItemList
+             */
+            favItemList: null,
 
             /**
              * Hit results number.
@@ -99,6 +107,10 @@ define([
         initialize: function () {
             var self = this;
             this.set('itemList', new ItemList());
+            this.set('favItemList', new ItemList());
+
+            // Restore with Local Storage.
+            this.get('favItemList').fetch();
 
             // Events
             this.on('change:query', function (Application, query) {
@@ -164,10 +176,30 @@ define([
          * @param {Object} items
          */
         addItems: function (items) {
-            var i;
+            var self = this,
+                newItem,
+                i;
+
+            function updateFavItemList(item) {
+                var favItem = self.get('favItemList').get(item.id);
+
+                // Add clone instance to fav.
+                if (item.get('fav')) {
+                    self.get('favItemList').create(item.clone());
+                }
+                // Destroy clone instance in fav.
+                else if (favItem) {
+                    favItem.destroy();
+                }
+            }
+
             this.set('loadedPage', this.get('loadedPage') + 1);
             for (i = 0; i < items.length; i++) {
-                this.get('itemList').add(new Item(items[i]));
+                newItem = new Item(items[i]);
+                newItem.set('id', items[i].isbn || items[i].jan);               // Set unique string to the model id. In this case, I use ISBN or JAN code.
+                newItem.set('fav', this.get('favItemList').get(newItem.id));    // Set fav or not.
+                newItem.on('change:fav', updateFavItemList);
+                self.get('itemList').add(newItem);
             }
             if (this.get('itemList').length >= this.get('hitNumber')) {
                 this.set('loadComplete', true);

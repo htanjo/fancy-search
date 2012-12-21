@@ -32,6 +32,8 @@ define([
          */
         initialize: function () {
             this.render();
+            this.updateStatus();
+            this.model.on('change', this.updateStatus, this);
         },
 
         /**
@@ -48,14 +50,32 @@ define([
          * @return {Article}
          */
         render: function () {
+            var self = this;
             this.$el = $(this.template(this.model.toJSON()));
 
             // Init DOM elements.
-            this.$('.status').tipsy({
-                gravity: 's'
-            });
+            this.$('.status')
+                .tipsy({
+                    gravity: 's'
+                })
+                .click(function () {
+                    self.model.set('fav', !self.model.get('fav'));
+                });
 
             return this;
+        },
+
+        /**
+         * Render to update status.
+         * @method updateStatus
+         */
+        updateStatus: function () {
+            if (this.model.get('fav')) {
+                this.$el.addClass('fav');
+            }
+            else {
+                this.$el.removeClass('fav');
+            }
         }
     });
 

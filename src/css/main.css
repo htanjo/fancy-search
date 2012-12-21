@@ -633,10 +633,6 @@ html.lt-ie8 .app {
   padding: 0;
   list-style-type: none;
   white-space: nowrap;
-  -webkit-transition: right 350ms;
-  -moz-transition: right 350ms;
-  -o-transition: right 350ms;
-  transition: right 350ms;
 }
 .header .navigation li {
   display: inline-block;
