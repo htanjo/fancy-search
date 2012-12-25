@@ -245,7 +245,7 @@ define([
         &#x2F;**
          * Load items data.
          * @method loadItems
-         * @param {String} [query]
+         * @param {Object} [query]
          *&#x2F;
         loadItems: function (query) {
             var self = this,
@@ -256,8 +256,7 @@ define([
                     booksGenreId: &#x27;000&#x27;,
                     sort: &#x27;sales&#x27;
                 },
-                &#x2F;&#x2F;queryParams = $.isEmptyObject(query) ? {booksGenreId: &#x27;000&#x27;} : query;
-                queryParams = query;
+                queryParams = query || {};
             this.set(&#x27;isLoading&#x27;, true);
             this.clearError();
             $.ajax({
@@ -270,17 +269,18 @@ define([
                     var items,
                         count;
                     try {
-                        items = data.Body.BooksTotalSearch.Items.Item;
+                        items = new ItemList(data.Body.BooksTotalSearch.Items.Item);
                         count = parseInt(data.Body.BooksTotalSearch.count, 10);
                     }
                     &#x2F;&#x2F; Invalid response.
                     catch (error) {
-                        items = [];
+                        items = new ItemList();
                         count = self.get(&#x27;itemList&#x27;).length;
                     }
                     self.set(&#x27;isLoading&#x27;, false);
                     self.set(&#x27;hitNumber&#x27;, count);
                     self.addItems(items);
+                    &#x2F;&#x2F;self.addItems(self.get(&#x27;favItemList&#x27;).clone());
                 },
                 error: function () {
                     var count = self.get(&#x27;itemList&#x27;).length;
@@ -295,34 +295,31 @@ define([
         &#x2F;**
          * Add items data.
          * @method addItems
-         * @param {Object} items
+         * @param {itemList} items
          *&#x2F;
         addItems: function (items) {
-            var self = this,
-                newItem,
-                i;
-
-            function updateFavItemList(item) {
-                var favItem = self.get(&#x27;favItemList&#x27;).get(item.id);
-
-                &#x2F;&#x2F; Add clone instance to fav.
-                if (item.get(&#x27;fav&#x27;)) {
-                    self.get(&#x27;favItemList&#x27;).create(item.clone());
-                }
-                &#x2F;&#x2F; Destroy clone instance in fav.
-                else if (favItem) {
-                    favItem.destroy();
-                }
-            }
+            var self = this;
 
             this.set(&#x27;loadedPage&#x27;, this.get(&#x27;loadedPage&#x27;) + 1);
-            for (i = 0; i &lt; items.length; i++) {
-                newItem = new Item(items[i]);
-                newItem.set(&#x27;id&#x27;, items[i].isbn || items[i].jan);               &#x2F;&#x2F; Set unique string to the model id. In this case, I use ISBN or JAN code.
-                newItem.set(&#x27;fav&#x27;, this.get(&#x27;favItemList&#x27;).get(newItem.id));    &#x2F;&#x2F; Set fav or not.
-                newItem.on(&#x27;change:fav&#x27;, updateFavItemList);
-                self.get(&#x27;itemList&#x27;).add(newItem);
-            }
+
+            items.forEach(function (item) {
+                item.set(&#x27;id&#x27;, item.get(&#x27;isbn&#x27;) || item.get(&#x27;jan&#x27;));    &#x2F;&#x2F; Set unique string to the model id. In this case, I use ISBN or JAN code.
+                item.set(&#x27;fav&#x27;, self.get(&#x27;favItemList&#x27;).get(item.id));  &#x2F;&#x2F; Set fav or not.
+                item.on(&#x27;change:fav&#x27;, function () {
+                    var favItem = self.get(&#x27;favItemList&#x27;).get(item.id);
+
+                    &#x2F;&#x2F; Add clone instance to fav.
+                    if (item.get(&#x27;fav&#x27;)) {
+                        self.get(&#x27;favItemList&#x27;).create(item.clone());
+                    }
+                    &#x2F;&#x2F; Destroy clone instance in fav.
+                    else if (favItem) {
+                        favItem.destroy();
+                    }
+                });
+            });
+            this.get(&#x27;itemList&#x27;).add(items.models);
+
             if (this.get(&#x27;itemList&#x27;).length &gt;= this.get(&#x27;hitNumber&#x27;)) {
                 this.set(&#x27;loadComplete&#x27;, true);
             }

@@ -523,7 +523,7 @@
                 {
                     "name": "query",
                     "description": "",
-                    "type": "String",
+                    "type": "Object",
                     "optional": true
                 }
             ],
@@ -540,7 +540,7 @@
                 {
                     "name": "items",
                     "description": "",
-                    "type": "Object"
+                    "type": "ItemList"
                 }
             ],
             "class": "Application",
@@ -548,7 +548,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 209,
+            "line": 206,
             "description": "Clear items collection.",
             "itemtype": "method",
             "name": "clearItems",
@@ -557,7 +557,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 219,
+            "line": 216,
             "description": "Update input text.",
             "itemtype": "method",
             "name": "updateInput",
@@ -566,7 +566,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 234,
+            "line": 231,
             "description": "Detect error.",
             "itemtype": "method",
             "name": "detectError",
@@ -581,7 +581,7 @@
         },
         {
             "file": "src\\js\\app\\models\\application.js",
-            "line": 243,
+            "line": 240,
             "description": "Clear error.",
             "itemtype": "method",
             "name": "clearError",

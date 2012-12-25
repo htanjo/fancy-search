@@ -123,7 +123,7 @@ define([
         /**
          * Load items data.
          * @method loadItems
-         * @param {String} [query]
+         * @param {Object} [query]
          */
         loadItems: function (query) {
             var self = this,
@@ -134,8 +134,7 @@ define([
                     booksGenreId: '000',
                     sort: 'sales'
                 },
-                //queryParams = $.isEmptyObject(query) ? {booksGenreId: '000'} : query;
-                queryParams = query;
+                queryParams = query || {};
             this.set('isLoading', true);
             this.clearError();
             $.ajax({
@@ -148,17 +147,18 @@ define([
                     var items,
                         count;
                     try {
-                        items = data.Body.BooksTotalSearch.Items.Item;
+                        items = new ItemList(data.Body.BooksTotalSearch.Items.Item);
                         count = parseInt(data.Body.BooksTotalSearch.count, 10);
                     }
                     // Invalid response.
                     catch (error) {
-                        items = [];
+                        items = new ItemList();
                         count = self.get('itemList').length;
                     }
                     self.set('isLoading', false);
                     self.set('hitNumber', count);
                     self.addItems(items);
+                    //self.addItems(self.get('favItemList').clone());
                 },
                 error: function () {
                     var count = self.get('itemList').length;
@@ -173,34 +173,31 @@ define([
         /**
          * Add items data.
          * @method addItems
-         * @param {Object} items
+         * @param {itemList} items
          */
         addItems: function (items) {
-            var self = this,
-                newItem,
-                i;
-
-            function updateFavItemList(item) {
-                var favItem = self.get('favItemList').get(item.id);
-
-                // Add clone instance to fav.
-                if (item.get('fav')) {
-                    self.get('favItemList').create(item.clone());
-                }
-                // Destroy clone instance in fav.
-                else if (favItem) {
-                    favItem.destroy();
-                }
-            }
+            var self = this;
 
             this.set('loadedPage', this.get('loadedPage') + 1);
-            for (i = 0; i < items.length; i++) {
-                newItem = new Item(items[i]);
-                newItem.set('id', items[i].isbn || items[i].jan);               // Set unique string to the model id. In this case, I use ISBN or JAN code.
-                newItem.set('fav', this.get('favItemList').get(newItem.id));    // Set fav or not.
-                newItem.on('change:fav', updateFavItemList);
-                self.get('itemList').add(newItem);
-            }
+
+            items.forEach(function (item) {
+                item.set('id', item.get('isbn') || item.get('jan'));    // Set unique string to the model id. In this case, I use ISBN or JAN code.
+                item.set('fav', self.get('favItemList').get(item.id));  // Set fav or not.
+                item.on('change:fav', function () {
+                    var favItem = self.get('favItemList').get(item.id);
+
+                    // Add clone instance to fav.
+                    if (item.get('fav')) {
+                        self.get('favItemList').create(item.clone());
+                    }
+                    // Destroy clone instance in fav.
+                    else if (favItem) {
+                        favItem.destroy();
+                    }
+                });
+            });
+            this.get('itemList').add(items.models);
+
             if (this.get('itemList').length >= this.get('hitNumber')) {
                 this.set('loadComplete', true);
             }
